@@ -12,34 +12,45 @@ $(window).resize(function() {
 });
 
 //изменяется - для плавной обратной анимации animate.css*/
+var limit = 0;
 $(window).scroll(function() {
-    $('.animated').each(function() {
-        var imagePos = $(this).offset().top;
-        var imageHght = $(this).outerHeight();
-        var topOfWindow = $(window).scrollTop() + 40;
-        var heightOfWindow = $(window).height();
-        var animName = $(this).data('anim');
-        if (!$(this).data('atop')) {
-            var animTop = 0.9;
-        } else {
-            var animTop = $(this).data('atop');
-        }
-        if (imagePos < topOfWindow + heightOfWindow * animTop && imagePos + imageHght > topOfWindow) {
-            $(this).css('visibility', 'visible').addClass(animName);
+    if ($(window).scrollTop() >= 100) {
+        if (limit == 0) {
 
-        } else if (imagePos + imageHght < topOfWindow || imagePos > topOfWindow + heightOfWindow) {
-            $(this).css('visibility', 'hidden').removeClass(animName);
+            $('.header_item_circle .num').animateNumber({ number: 10 }, 2000);
+            $('.header_item_circle .num2').animateNumber({ number: 972 }, 2000);
+            $('.header_item_circle .num3').animateNumber({ number: 6 }, 2000);
         }
-    });
+        limit++;
+    }
+
+$('.animated').each(function() {
+    var imagePos = $(this).offset().top;
+    var imageHght = $(this).outerHeight();
+    var topOfWindow = $(window).scrollTop() + 40;
+    var heightOfWindow = $(window).height();
+    var animName = $(this).data('anim');
+    if (!$(this).data('atop')) {
+        var animTop = 0.9;
+    } else {
+        var animTop = $(this).data('atop');
+    }
+    if (imagePos < topOfWindow + heightOfWindow * animTop && imagePos + imageHght > topOfWindow) {
+        $(this).css('visibility', 'visible').addClass(animName);
+
+    } else if (imagePos + imageHght < topOfWindow || imagePos > topOfWindow + heightOfWindow) {
+        $(this).css('visibility', 'hidden').removeClass(animName);
+    }
+});
 });
 /**
  * FastClick
  */
 
-if ( 'addEventListener' in document ) {
-    document.addEventListener('DOMContentLoaded', function () {
-        FastClick.attach( document.body );
-    }, false );
+if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+    }, false);
 }
 // Initialize Slidebars
 (function($) {
@@ -51,10 +62,10 @@ if ( 'addEventListener' in document ) {
     $('#nav-button-label').on('click', function(event) {
         // Stop default action and bubbling
         event.stopPropagation();
-        event.preventDefault();   
+        event.preventDefault();
         // Toggle the Slidebar with id 'id-1'
         controller.toggle('id-1');
-        $("html,body").toggleClass("slidebars"); 
+        $("html,body").toggleClass("slidebars");
     });
 
     // Close Slidebar links
@@ -78,9 +89,9 @@ if ( 'addEventListener' in document ) {
         $('[canvas]').addClass('js-close-any');
     });
     // Add close class to canvas container when Slidebar is opened
-        $( controller.events ).on( 'closing', function ( event ) {
-            $( '[canvas]' ).removeClass( 'js-close-any' );
-        } );
+    $(controller.events).on('closing', function(event) {
+        $('[canvas]').removeClass('js-close-any');
+    });
     // Close any
     $(document).on('click', '.js-close-any', function(event) {
         if (controller.getActiveSlidebar()) {
@@ -88,17 +99,28 @@ if ( 'addEventListener' in document ) {
             event.stopPropagation();
             $("#nav-button-label").removeClass("nav-on");
             $("#nav-button-label .nav-line").removeClass("active");
-            $("html,body").removeClass("slidebars");         
+            $("html,body").removeClass("slidebars");
             controller.close();
-            
+
         }
-    });  
+    });
 })($);
+
+
 $(document).ready(function() {
-   
+    if ($(window).scrollTop() >= 100) {
+        if (limit == 0) {
+
+            $('.header_item_circle .num').animateNumber({ number: 10 }, 2000);
+            $('.header_item_circle .num2').animateNumber({ number: 972 }, 2000);
+            $('.header_item_circle .num3').animateNumber({ number: 6 }, 2000);
+        }
+        limit++;
+    }
+
     var md = new MobileDetect(window.navigator.userAgent);
-    
-    if (md.userAgent() == "Safari" && md.mobile() == "iPhone" || md.mobile() == "iPad" ) {
+
+    if (md.userAgent() == "Safari" && md.mobile() == "iPhone" || md.mobile() == "iPad") {
         $("html,body").css("overflow", "hidden !important");
     }
     // для инициализации tooltips
@@ -205,10 +227,10 @@ $(document).ready(function() {
 
         if (window.matchMedia("(min-width: 992px)").matches) {
             $("body").css({ "overflow": "hidden", "padding-right": "17px" });
-        }          
-        if (window.matchMedia("(max-width: 992px)").matches){
-            
-           $("body").css({ "overflow": "hidden", "padding-right": "0px" }); 
+        }
+        if (window.matchMedia("(max-width: 992px)").matches) {
+
+            $("body").css({ "overflow": "hidden", "padding-right": "0px" });
         }
     });
     // overlay для закрытия

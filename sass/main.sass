@@ -45,6 +45,12 @@ nav[canvas]
 	left: 20px
 	display: none
 	z-index: 100
+nav[canvas=header_top]
+	display: block
+	width: 100%
+	top: 0
+	left: 0
+	right: 0
 [class*=js-open-], [class*=js-toggle-], [class*=js-close-]
 	cursor: pointer
 [off-canvas]
@@ -58,74 +64,92 @@ nav[canvas]
 
 
 // Секция our_advantages
-.our_advantages
-	min-height: 630px
+.reliable_service
+	min-height: 580px
 	background-color: #fff
+	text-align: center
 	h2
-		margin-top: 75px
-		color: #626262
+		margin-top: 111px
+		margin-bottom: 13px
+		color: $main_txt_color
+		font-family: $font_Lato_Bold
 		text-align: center
-		font-size: 35px
-	.our_advantages_item
+		font-size: 36px
+	p
+		font-size: 18px
+	.reliable_service_item
+		margin-top: 63px
 		margin-bottom: 55px
-		h3
-			font-size: 27px
-			text-align: center
 		p
-			margin-top: 15px
-			font-size: 22px
+			margin-top: 27px
+			font-size: 20px
 			line-height: 1.2
 			text-align: center
-		.our_advantages_item_img
+		.reliable_service_item_img
 			text-align: center
 			i
 				font-size: 72px
 				color: #00b6f4
-// Секция main_content
-.main_content
-	text-align: center 
-// Секция 
+
+// Секция intermediate
 .intermediate
-	text-align: center
-	min-height: 300px
-	background-color: #00b6f4
-	.intermediate_title
-		max-width: 650px
-		margin: auto		
-		color: #052243
+	min-height: 449px
+	background: url('../img/intermediate_bg.jpg') center top no-repeat
+	background-size: cover
+	.intermediate_title		
 		h3
-			margin: 30px 30px
-			text-transform: uppercase
-			font-size: 24px
-			color: #052243
-			
+			margin: 108px 0 11px
+			font-size: 36px
+			font-family: $font_Lato_Bold
+			color: #fff
+			text-align: center
+			span
+				color: $main_color
+		p
+			font-size: 18px
+			color: #fff
+			text-align: center
 			
 
 	.intermediate_wrap
 		margin-top: 40px
 		form
+			text-align: center
+			overflow: hidden
+			margin-top: 65px
 		.intermediate_item
 			display: inline-block
+			text-align: left
+			margin-bottom: 40px
 			input
-				width: 260px
-				display: inline-block	
-				border: 1px solid #a2b6c9
-				background: #fff
-				color: #43637f
-				height: 40px
-				margin: 0 10px
+				width: 100%				
+				height: 37px
+				border: none
+				border-bottom: 1px solid #fff
+				background: transparent
+				color: #9a9a9a
+				margin-left: 10px
 				padding: 0 0 0 9px
+				font-size: 18px
 				&::-webkit-input-placeholder
-					color: #43637f
+					color: #9a9a9a
 				&:-moz-placeholder
-					color: #43637f
+					color: #9a9a9a
 				&::-moz-placeholder
-					color: #43637f
+					color: #9a9a9a
 				&:-ms-input-placeholder
-					color: #43637f
-			input[type=submit]
-				background: #052243
-				color: #fff
+					color: #9a9a9a
+		input[type=submit]
+			@extend %main_btn
+			border: none
+			margin-top: 7px
+			&:hover
+				@extend %main_btn_hover	
+			&:active
+				@extend %main_btn_active
+			&:focus
+				@extend %main_btn_focus
+		
 	
 //	Секция 
 //	Секция
