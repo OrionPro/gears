@@ -24,7 +24,6 @@ $(window).scroll(function() {
         limit++;
     }
 
-<<<<<<< HEAD
     $('.animated').each(function() {
         var imagePos = $(this).offset().top;
         var imageHght = $(this).outerHeight();
@@ -43,26 +42,6 @@ $(window).scroll(function() {
             $(this).css('visibility', 'hidden').removeClass(animName);
         }
     });
-=======
-$('.animated').each(function() {
-    var imagePos = $(this).offset().top;
-    var imageHght = $(this).outerHeight();
-    var topOfWindow = $(window).scrollTop() + 40;
-    var heightOfWindow = $(window).height();
-    var animName = $(this).data('anim');
-    if (!$(this).data('atop')) {
-        var animTop = 0.9;
-    } else {
-        var animTop = $(this).data('atop');
-    }
-    if (imagePos < topOfWindow + heightOfWindow * animTop && imagePos + imageHght > topOfWindow) {
-        $(this).css('visibility', 'visible').addClass(animName);
-
-    } else if (imagePos + imageHght < topOfWindow || imagePos > topOfWindow + heightOfWindow) {
-        $(this).css('visibility', 'hidden').removeClass(animName);
-    }
-});
->>>>>>> origin/master
 });
 /**
  * FastClick
@@ -167,7 +146,6 @@ $(document).ready(function() {
     //     return false;
     // });
     //  Активация слайдера
-<<<<<<< HEAD
     $(".owl-carousel").owlCarousel({
         loop: true,
         items: 5,
@@ -223,25 +201,6 @@ $(document).ready(function() {
     }
 
     showGoogleMaps();
-=======
-    // $(".owl-carousel").owlCarousel({
-    //     loop: true,
-    //     items: 1,
-    //     dots: true
-    // });
-    // Кастомные кнопки управления слайдером
-    // var owl = $('.owl-carousel');
-    // owl.owlCarousel();
-    // $('.customNextBtn').click(function() {
-    //     owl.trigger('next.owl.carousel', [700]);
-    // });
-    // // Go to the previous item
-    // $('.customPrevBtn').click(function() {
-    //     // With optional speed parameter
-    //     // Parameters has to be in square bracket '[]'
-    //     owl.trigger('prev.owl.carousel', [700]);
-    // });
->>>>>>> origin/master
 
     // Select в модальном окне
     $(document).click(function() {
