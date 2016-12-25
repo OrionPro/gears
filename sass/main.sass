@@ -1,0 +1,381 @@
+@import "bourbon"
+@import "vars.sass"
+@import "sprite/sprite.sass"
+
+// loads Libs SASS
+@import "app/libs/animate/animate.sass"
+@import "app/libs/owl.carousel/assets/owl.carousel.sass"
+@import "../app/libs/FontAwesome/font-awesome.min"
+@import "../app/libs/slidebars/slidebars.min"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+// Оформление слайдбара
+[off-canvas]
+	transition: transform 0.4s
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+[off-canvas*=left]
+	width: 250px
+[canvas=container]
+	background-color: transparent
+nav[canvas]
+	position: fixed	
+	top: 20px
+	right: 20px
+	display: none
+	z-index: 101
+nav[canvas=header_top]
+	display: block
+	width: 100%
+	top: 0
+	left: 0
+	right: 0
+	z-index: 100	
+[class*=js-open-], [class*=js-toggle-], [class*=js-close-]
+	cursor: pointer
+[off-canvas]
+	ul
+		&.menu
+			margin: 0
+			padding: 0
+			display: block
+			list-style: none
+
+
+
+// Секция our_advantages
+.reliable_service
+	min-height: 580px
+	background-color: #fff
+	text-align: center
+	h2
+		margin-top: 111px
+		margin-bottom: 13px
+	p
+		font-size: 18px
+	.reliable_service_item
+		margin-top: 63px
+		margin-bottom: 55px
+		p
+			margin-top: 27px
+			font-size: 20px
+			line-height: 1.2
+			text-align: center
+		.reliable_service_item_img
+			text-align: center
+			i
+				font-size: 72px
+				color: #00b6f4
+
+// Секция intermediate
+.intermediate
+	min-height: 449px
+	background: url('../img/intermediate_bg.jpg') center top no-repeat
+	background-size: cover
+	.intermediate_title		
+		h2
+			margin: 108px 0 11px
+			color: #fff
+			span
+				color: $main_color
+		p
+			font-size: 18px
+			color: #fff
+			text-align: center
+			
+
+	.intermediate_wrap
+		margin-top: 40px
+		form
+			text-align: center
+			overflow: hidden
+			margin-top: 65px
+		.intermediate_item
+			display: inline-block
+			text-align: left
+			margin-bottom: 40px
+			input
+				width: 100%				
+				height: 37px
+				border: none
+				border-bottom: 1px solid #fff
+				background: transparent
+				color: #9a9a9a
+				margin-left: 10px
+				padding: 0 0 0 9px
+				font-size: 18px
+				&::-webkit-input-placeholder
+					color: #9a9a9a
+				&:-moz-placeholder
+					color: #9a9a9a
+				&::-moz-placeholder
+					color: #9a9a9a
+				&:-ms-input-placeholder
+					color: #9a9a9a
+				&:active
+					outline: 0
+				&:focus
+					outline: 0
+					
+		input[type=submit]
+			@extend %main_btn
+			border: none
+			margin-top: 7px
+			&:hover
+				@extend %main_btn_hover	
+			&:active
+				@extend %main_btn_active
+			&:focus
+				@extend %main_btn_focus
+		
+	
+//	Секция  our_partners
+.our_partners
+	min-height: 450px
+	.container
+		position: relative
+	h2
+		margin-top: 103px
+		margin-bottom: 13px
+	.our_partners_slider
+		max-width: 963px
+		margin: 30px auto 0
+		position: relative
+	.owl-item
+		div
+			height: 160px
+			text-align: center
+			display: table-cell
+			vertical-align: middle
+			img
+				display: table-cell
+				vertical-align: middle
+	.customNextBtn
+		background: url('../img/our_partners_slider_arrow_right.png') 0 0 no-repeat
+		width: 46px
+		height: 54px
+		position: absolute
+		right: -90px
+		top: calc(50% - 16px)
+		cursor: pointer
+		transition: 0.5s
+		&:hover
+			background: url('../img/our_partners_slider_arrow_right_hover.png') 0 0 no-repeat
+	.customPrevBtn
+		background: url('../img/our_partners_slider_arrow_left.png') 0 0 no-repeat
+		width: 46px
+		height: 54px
+		position: absolute
+		left: -90px
+		top: calc(50% - 16px)
+		cursor: pointer
+		transition: 0.5s
+		&:hover
+			background: url('../img/our_partners_slider_arrow_left_hover.png') 0 0 no-repeat
+	.our_partners_img_wheels
+		position: absolute
+		top: -100px
+		left: -10px
+//	Секция hydropower_you_can
+.hydropower_you_can
+	min-height: 480px
+	text-align: center
+	h2
+		margin-top: 53px
+		margin-bottom: 63px
+		span
+			text-transform: uppercase
+			color: $main_color	
+	.hydropower_you_can_item
+		p
+			font-size: 20px
+			margin-top: 20px	
+		a
+			margin-top: 31px
+			@extend %main_btn			
+			&:hover
+				@extend %main_btn_hover	
+			&:active
+				@extend %main_btn_active
+			&:focus
+				@extend %main_btn_focus
+		.hydropower_you_can_item_img
+			height: 90px
+			@extend %flex
+			align-items: flex-end
+			img
+
+
+		
+//	Секция what_customers_think
+.what_customers_think
+	text-align: center
+	h2
+		margin-top: 50px
+		line-height: 1.3
+		span
+			color: $main_color
+	.what_customers_think_item_wrap
+		margin-top: 70px	
+	.what_customers_think_item
+		margin-bottom: 60px
+		&:nth-of-type(2n+1)
+			.what_customers_think_item_img
+				margin-left: 15px
+		&:last-of-type
+			margin-bottom: 130px
+	.what_customers_think_item_img	
+		width: 170px
+		height: 170px
+		margin-right: 25px
+		float: left
+	.what_customers_think_item_txt
+		float: left
+		width: 360px
+		text-align: left
+		h3
+			font-size: 24px
+			margin: -10px 0 0 0
+		p
+			margin-top: 10px
+			max-height: 147px
+			font-size: 14px
+			line-height: 1.35
+			overflow: hidden
+		a
+			margin-top: 13px
+			padding-left: 3px	
+			display: inline-block
+			font-size: 18px
+			color: $main_txt_color
+			text-decoration: underline
+			transition: 0.5s
+			&:hover
+				color: $main_color
+			&:hover:before
+				background: url('../img/what_customers_think_item_txt_img_a_hover.png') 0 0 no-repeat	
+			&:before
+				content: ""
+				width: 21px
+				height: 11px
+				display: inline-block
+				vertical-align: middle
+				position: relative
+				left: -6px
+				background: url('../img/what_customers_think_item_txt_img_a.png') 0 0 no-repeat
+				transition: 0.5s
+
+//	Секция map
+.map
+	min-height: 715px
+	position: relative
+	#map
+		height: 100%
+		width: 54.5%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 10
+	.map_contacts
+		width: 414px
+		margin-top: 90px
+		float: right
+		h2
+			margin-top: 20px
+			margin-bottom: 56px
+			text-align: left
+	.map_contacts_item
+		margin-bottom: 30px
+		&:first-of-type
+			i
+				margin-right: 14px
+		&:nth-of-type(2)
+			i
+				margin-right: 10px
+		&:nth-of-type(3)
+			i
+				margin-right: 10px
+		&:nth-of-type(4)
+			i
+				margin-right: 7px
+		p
+			font-size: 20px
+			&:first-of-type
+				font-size: 18px
+				margin-bottom: 4px
+				color: $main_color
+				padding-left: -7px
+				
+		a
+			font-size: 20px
+			color: $main_txt_color
+			&:hover
+				text-decoration: none
+		
+
+
+//	Секция 
+//	Секция
+//	Секция
+//	Секция
+//	Секция
+
+
+// Секия footer 
+.footer
+	background-color: #1b1e27
+	min-height: 60px
+	text-align: center
+	.footer_copyright
+		float: left
+		margin-left: 30px
+		margin-top: 18px
+		p
+			font-size: 14px
+			text-transform: uppercase
+			color: #fff
+	a
+		font-size: 14px
+		color: #fff
+		margin-top: 18px
+		display: inline-block
+		position: relative
+		left: 21px
+	.footer_copyright2
+		float: right
+		span
+			font-size: 14px
+			color: #fff
+		a
+			margin-right: 37px
+			margin-top: 13px
+			left: 0
+			&:hover
+				text-decoration: none
+		img
+			position: relative
+			left: 5px
+//ALWAYS END
+@import "media"
+
