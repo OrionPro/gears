@@ -237,14 +237,32 @@ nav[canvas=header_top]
 		span
 			color: $main_color
 	.what_customers_think_item_wrap
-		margin-top: 70px	
+		margin-top: 65px
+	.what_customers_think_item_wrap_inner
+		overflow: hidden
+		padding-top: 5px
+		&:last-of-type
+			.what_customers_think_item
+				&:last-of-type
+					margin-bottom: 130px
 	.what_customers_think_item
 		margin-bottom: 60px
 		&:nth-of-type(2n+1)
 			.what_customers_think_item_img
-				margin-left: 15px
-		&:last-of-type
-			margin-bottom: 130px
+				margin-left: 15px		
+			
+		.what_customers_think_item_action
+			a
+				display: none
+		&.close_txt
+			.what_customers_think_item_action
+				.open_a
+					display: inline-block
+		&.open_txt
+			.what_customers_think_item_action
+				.close_a
+					display: inline-block
+
 	.what_customers_think_item_img	
 		width: 170px
 		height: 170px
@@ -263,28 +281,32 @@ nav[canvas=header_top]
 			font-size: 14px
 			line-height: 1.35
 			overflow: hidden
-		a
-			margin-top: 13px
-			padding-left: 3px	
-			display: inline-block
-			font-size: 18px
-			color: $main_txt_color
-			text-decoration: underline
-			transition: 0.5s
-			&:hover
-				color: $main_color
-			&:hover:before
-				background: url('../img/what_customers_think_item_txt_img_a_hover.png') 0 0 no-repeat	
-			&:before
-				content: ""
-				width: 21px
-				height: 11px
+			&.show
+				max-height: 100%
+		
+		div.social
+			& > a
+				margin-top: 13px
+				padding-left: 3px	
 				display: inline-block
-				vertical-align: middle
-				position: relative
-				left: -6px
-				background: url('../img/what_customers_think_item_txt_img_a.png') 0 0 no-repeat
+				font-size: 18px
+				color: $main_txt_color
+				text-decoration: underline
 				transition: 0.5s
+				&:hover
+					color: $main_color
+				&:hover:before
+					background: url('../img/what_customers_think_item_txt_img_a_hover.png') 0 0 no-repeat	
+				&:before
+					content: ""
+					width: 21px
+					height: 11px
+					display: inline-block
+					vertical-align: middle
+					position: relative
+					left: -6px
+					background: url('../img/what_customers_think_item_txt_img_a.png') 0 0 no-repeat
+					transition: 0.5s
 
 //	Секция map
 .map
@@ -333,9 +355,98 @@ nav[canvas=header_top]
 			&:hover
 				text-decoration: none
 		
+//	Секция diagnostics
+.diagnostics
+	min-height: 730px
+	background: url('../img/diagnostics_bg.jpg') center top no-repeat
+	text-align: center
+	&.intermediate
+		.intermediate_wrap
+			form
+				margin-top: 36px
+	h1
+		color: #fff
+		font-size: 48px
+		margin-top: 188px
+		margin-bottom: 40px
+	h2
+		color: #fff
+		margin-top: 77px
+	p
+		font-size: 17px
+		color: #fff	
+	form
+		margin-top: 60px
 
+//	Секция why_wear_out_rail
+.why_wear_out_rail
+	text-align: center
+	h2
+		margin-top: 128px
+		margin-bottom: 60px
+	.why_wear_out_rail_item
+		margin-bottom: 30px
+		h3
+			font-size: 21px
+			margin-bottom: 6px
+		p
+			font-size: 16px
+			line-height: 1.2
+//	Секция repair_if_necessary
+.repair_if_necessary
+	text-align: center
+	min-height: 547px
+	h2
+		margin-top: 92px
+		margin-bottom: 60px
+	.repair_if_necessary_item
+		.repair_if_necessary_item_img
+			height: 100px
+			@extend %flex
+		h3
+			margin-bottom: 12px
+			margin-top: 20px
+			@include font(#000, 24px,  $font_Lato_Bold, 1.2)
+		p
+			font-size: 18px
+			line-height: 1.2
+//	Секция how_do_we_repair
+.how_do_we_repair
+	h2
+		margin-top: 127px
+	.how_do_we_repair_item_wrap
+		margin-top: 75px
+	.how_do_we_repair_item
+		margin-bottom: 75px
+		&:nth-of-type(2n+1)
+			.how_do_we_repair_item_img
+				margin-left: 15px
+	.how_do_we_repair_item_img
+		float: left
+		margin-right: 30px
+	.how_do_we_repair_item_txt
+		width: 258px
+		float: left
+		h3
+			font-size: 20px
+			line-height: 1.1
+			margin-top: 0
+			position: relative
+			z-index: 3
+		p
+			font-size: 14px
+			line-height: 1.32
+			height: 147px
+			overflow: hidden
+		span
+			position: absolute
+			top: -42px
+			left: 0
+			z-index: 0
+			@include font(#6d6d6d, 90px,  $font_Lato_Bold, 1.2)
+			opacity: 0.15
 
-//	Секция 
+//	Секция
 //	Секция
 //	Секция
 //	Секция

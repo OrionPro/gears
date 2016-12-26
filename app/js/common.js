@@ -15,6 +15,8 @@ $(window).resize(function() {
 var limit = 0;
 $(window).scroll(function() {
     if ($(window).scrollTop() >= 100) {
+        tl1.resume();
+
         if (limit == 0) {
 
             $('.header_item_circle .num').animateNumber({ number: 10 }, 2000);
@@ -106,17 +108,56 @@ if ('addEventListener' in document) {
     });
 })($);
 
+var tl1 = new TimelineMax(); // анимация кругов
 
 $(document).ready(function() {
-    if ($(window).scrollTop() >= 100) {
-        if (limit == 0) {
 
-            $('.header_item_circle .num').animateNumber({ number: 10 }, 2000);
-            $('.header_item_circle .num2').animateNumber({ number: 972 }, 2000);
-            $('.header_item_circle .num3').animateNumber({ number: 6 }, 2000);
+
+    // парсит параграфы в what_customers_think_item и показывает от количества букв в параграфе ссылки показать весь отзыв или нет
+    var elem = $('.what_customers_think_item_txt');
+    elem.each(function() {
+        var pars = $(this).find('.parse').text().split('').length,
+            link = $(this).find('.what_customers_think_item_action'); 
+         
+        if (pars >= 466) {console.log(pars);
+            link.show();
+        } 
+        else if (pars <= 466){
+            link.hide();
         }
-        limit++;
+    });
+
+    // показывает при нажатии весь текст в параграфе
+    $('.what_customers_think_item_action .open_a').click(function(e) {
+        e.preventDefault();
+        $(this).parents('.what_customers_think_item').removeClass('close_txt').addClass('open_txt');
+        $(this).parents('.what_customers_think_item_txt').find('p').addClass('show');
+    });
+    $('.what_customers_think_item_action .close_a').click(function(e) {
+        e.preventDefault();
+        $(this).parents('.what_customers_think_item').removeClass('open_txt').addClass('close_txt');
+        $(this).parents('.what_customers_think_item_txt').find('p').removeClass('show');
+    });
+
+
+    tl1.pause();
+
+    function readyTimeLineGo() {
+        if ($(window).scrollTop() >= 100) {
+            tl1.resume();
+            // активация тайм линий при загрузке с измерением скролла
+
+            if (limit == 0) {
+
+                $('.header_item_circle .num').animateNumber({ number: 10 }, 2000);
+                $('.header_item_circle .num2').animateNumber({ number: 972 }, 2000);
+                $('.header_item_circle .num3').animateNumber({ number: 6 }, 2000);
+            }
+            limit++;
+        }
     }
+
+    readyTimeLineGo();
 
     var md = new MobileDetect(window.navigator.userAgent);
 
@@ -165,9 +206,7 @@ $(document).ready(function() {
     });
 
 
-    var tl1 = new TimelineMax(); // анимация кругов
-
-    tl1.from("#path4136", 2, { drawSVG: "0%" }, 0.4);
+    tl1.from(".path4136", 2, { drawSVG: "0%" }, 0.4);
 
     // Карта
     //  гугл карта
