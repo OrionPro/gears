@@ -18,6 +18,7 @@ body
 	color: $main_txt_color
 	-webkit-tap-highlight-color:transparent
 	// background: url('../main 1920px копия.jpg') center top no-repeat
+	//background: url('../main 970px копия.jpg') center top no-repeat
 h1
 	color: #fff
 	font: 72px $font_Lato_Light
@@ -323,6 +324,7 @@ label
 	display: inline-block
 	margin-top: 40px
 	margin-left: 30px
+	transition: 0.5s
 	a
 		color: #fff
 		font: 22px $font_Lato_Bold		
@@ -338,6 +340,7 @@ label
 	display: inline-block
 	position: relative
 	float: right
+	transition: 0.5s
 	ul
 		margin: 0
 		padding: 0
@@ -369,6 +372,11 @@ label
 				&:hover:after 
 					width: 100%
 					opacity: 1
+				&.active
+					&:after
+						content: ""
+						width: 100%
+						opacity: 1
 .header_title
 	position: relative
 	h1
@@ -414,7 +422,7 @@ label
 .header_title_img
 	position: absolute
 	bottom: -230px
-	right: -132px
+	right: -67px
 .header_item_circle_wrap
 	text-align: left
 .header_item_circle

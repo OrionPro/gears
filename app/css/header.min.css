@@ -1,6 +1,6 @@
 .dm-cell,.dm-modal,h2{text-align:center}
 .dm-modal .select .drop li a,.dm-modal .select .slct,.header_btn a+a:active,.header_btn a+a:hover,.header_logo a:hover,.header_nav ul li a{text-decoration:none}
-.dm-modal input[type=submit],.header_btn a{min-width:263px;height:54px;padding-left:10px;padding-right:10px;display:inline-block;background-color:#EE343B;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 2px 1px rgba(0,0,0,.35);box-shadow:0 2px 1px rgba(0,0,0,.35);color:#fff;font:18px Lato-Light,Arial,sans-serif;line-height:54px;-webkit-transition:.5s;transition:.5s}
+.dm-modal input[type=submit],.header_btn a{width:263px;height:54px;padding-left:10px;padding-right:10px;display:inline-block;background-color:#EE343B;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 2px 1px rgba(0,0,0,.35);box-shadow:0 2px 1px rgba(0,0,0,.35);color:#fff;font:18px Lato-Light,Arial,sans-serif;line-height:54px;-webkit-transition:.5s;transition:.5s}
 .popup.pop3 .dm-modal ul,p{padding:0}
 .dm-modal input[type=submit]:active,.dm-modal input[type=submit]:hover,.header_btn a:active,.header_btn a:hover{text-decoration:none;background-color:#ec1d25}
 .dm-modal input[type=submit]:focus,.header_btn a:focus{background-color:#ec1d25;outline:0}
@@ -63,17 +63,18 @@ p{margin:0}
 label.intermediate_item_label{font-size:14px;color:#fff;display:inline-block;margin-left:10px;margin-bottom:0}
 .header{text-align:center;min-height:1035px;background:url(../img/header_bg.jpg) center top no-repeat}
 .header .container{height:100%;min-height:100%;position:relative}
-.header_logo{display:inline-block;margin-top:40px;margin-left:30px}
+.header_logo{display:inline-block;margin-top:40px;margin-left:30px;-webkit-transition:.5s;transition:.5s}
 .header_logo a{color:#fff;font:22px Lato-Bold,Arial,sans-serif}
 .header_logo a span{margin-top:5px;font:19px Lato-Light,Arial,sans-serif;display:block}
 .header_item_circle,.header_nav,.header_nav ul li,.header_nav ul li a,label{display:inline-block}
-.header_nav{margin-top:55px;position:relative;float:right}
+.header_nav{margin-top:55px;position:relative;float:right;-webkit-transition:.5s;transition:.5s}
 .header_nav ul{margin:0;padding:0}
 .header_nav ul li{list-style:none;position:relative}
 .header_nav ul li a{margin-right:32px;color:#fff;font-size:19px;-webkit-transition:.5s;transition:.5s;position:relative}
 .header_nav ul li a:after{content:"";width:0;height:1px;position:absolute;top:35px;right:0;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);background-color:#ee343b;opacity:0;-webkit-transition:width .4s,opacity .5s;transition:width .4s,opacity .5s}
 .header_btn a,.header_title{position:relative}
 .header_nav ul li a:hover:after{width:100%;opacity:1}
+.header_nav ul li a.active:after{content:"";width:100%;opacity:1}
 .header_title h1{max-width:767px;margin-top:198px;margin-bottom:35px;text-align:left;margin-left:24px}
 .header_btn,.header_title p{margin-left:30px;text-align:left}
 .header_title p{max-width:600px;font-size:17px;color:#fff}
@@ -81,7 +82,7 @@ label.intermediate_item_label{font-size:14px;color:#fff;display:inline-block;mar
 .header_btn{margin-top:83px}
 .header_btn a{text-align:center;z-index:1}
 .header_btn a:first-of-type{margin-right:26px}
-.header_title_img{position:absolute;bottom:-230px;right:-132px}
+.header_title_img{position:absolute;bottom:-230px;right:-67px}
 .header_item_circle_wrap{text-align:left}
 .header_item_circle{vertical-align:top;margin-top:196px;text-align:left;margin-right:-60px}
 .header_item_circle:first-of-type{margin-left:59px}

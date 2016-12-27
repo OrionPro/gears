@@ -14,6 +14,7 @@ $(window).resize(function() {
 //изменяется - для плавной обратной анимации animate.css*/
 var limit = 0;
 $(window).scroll(function() {
+    // анимация чисел на главной странице
     if ($(window).scrollTop() >= 100) {
         tl1.resume();
 
@@ -25,7 +26,14 @@ $(window).scroll(function() {
         }
         limit++;
     }
-
+    if ($(window).scrollTop() > 0) {
+       $('nav[canvas=header_top]').addClass('fixed');       
+       $('.header_logo span').hide();       
+    }
+    else if ($(window).scrollTop() < 30){
+        $('nav[canvas=header_top]').removeClass('fixed');
+        $('.header_logo span').show(); 
+    }
     $('.animated').each(function() {
         var imagePos = $(this).offset().top;
         var imageHght = $(this).outerHeight();
@@ -111,7 +119,10 @@ if ('addEventListener' in document) {
 var tl1 = new TimelineMax(); // анимация кругов
 
 $(document).ready(function() {
-
+    // делаем фиксированное меню 
+    if ($(window).scrollTop() > 0) {
+       $('nav[canvas=header_top]').addClass('fixed');        
+    }
 
     // парсит параграфы в what_customers_think_item и показывает от количества букв в параграфе ссылки показать весь отзыв или нет
     var elem = $('.what_customers_think_item_txt');
@@ -119,10 +130,10 @@ $(document).ready(function() {
         var pars = $(this).find('.parse').text().split('').length,
             link = $(this).find('.what_customers_think_item_action'); 
          
-        if (pars >= 466) {console.log(pars);
+        if (pars >= 361) {
             link.show();
         } 
-        else if (pars <= 466){
+        else if (pars <= 361){
             link.hide();
         }
     });
@@ -190,7 +201,18 @@ $(document).ready(function() {
     $(".owl-carousel").owlCarousel({
         loop: true,
         items: 5,
-        dots: false
+        dots: false,
+        responsive:{
+            750:{
+                items:4
+            },
+            992:{
+                items:4
+            },
+            1200:{
+                items:5
+            }
+        }
     });
     // Кастомные кнопки управления слайдером
     var owl = $('.owl-carousel');

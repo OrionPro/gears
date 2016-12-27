@@ -51,7 +51,17 @@ nav[canvas=header_top]
 	top: 0
 	left: 0
 	right: 0
-	z-index: 100	
+	z-index: 100
+	transition: 0.5s
+	&.fixed
+		background-color: rgba(0,0,0,0.5)
+		height: 50px
+		.header_logo
+			margin-top: 14px
+			transition: 0.5s
+		.header_nav	
+			margin-top: 14px
+			transition: 0.5s	
 [class*=js-open-], [class*=js-toggle-], [class*=js-close-]
 	cursor: pointer
 [off-canvas]
@@ -116,7 +126,7 @@ nav[canvas=header_top]
 			text-align: left
 			margin-bottom: 40px
 			input
-				width: 100%				
+				width: 263px				
 				height: 37px
 				border: none
 				border-bottom: 1px solid #fff
@@ -142,6 +152,7 @@ nav[canvas=header_top]
 			@extend %main_btn
 			border: none
 			margin-top: 7px
+			margin-left: 15px
 			&:hover
 				@extend %main_btn_hover	
 			&:active
@@ -157,20 +168,20 @@ nav[canvas=header_top]
 		position: relative
 	h2
 		margin-top: 103px
-		margin-bottom: 13px
+		margin-bottom: 60px
 	.our_partners_slider
 		max-width: 963px
 		margin: 30px auto 0
 		position: relative
 	.owl-item
-		div
-			height: 160px
+		text-align: center
+		@extend %flex
+		div			
 			text-align: center
-			display: table-cell
-			vertical-align: middle
+			display: inline-block			
 			img
-				display: table-cell
-				vertical-align: middle
+
+				
 	.customNextBtn
 		background: url('../img/our_partners_slider_arrow_right.png') 0 0 no-repeat
 		width: 46px
@@ -277,7 +288,7 @@ nav[canvas=header_top]
 			margin: -10px 0 0 0
 		p
 			margin-top: 10px
-			max-height: 147px
+			max-height: 110px
 			font-size: 14px
 			line-height: 1.35
 			overflow: hidden
@@ -386,6 +397,8 @@ nav[canvas=header_top]
 		margin-bottom: 60px
 	.why_wear_out_rail_item
 		margin-bottom: 30px
+		height: 358px
+		overflow: hidden
 		h3
 			font-size: 21px
 			margin-bottom: 6px
@@ -400,6 +413,7 @@ nav[canvas=header_top]
 		margin-top: 92px
 		margin-bottom: 60px
 	.repair_if_necessary_item
+		margin-bottom: 20px
 		.repair_if_necessary_item_img
 			height: 100px
 			@extend %flex
@@ -446,7 +460,47 @@ nav[canvas=header_top]
 			@include font(#6d6d6d, 90px,  $font_Lato_Bold, 1.2)
 			opacity: 0.15
 
-//	Секция
+//	Секция repair_time
+.why_wear_out_rail
+	&.repair_time
+		h2
+			margin-top: 10px
+			margin-bottom: 15px
+		p
+			max-width: 813px
+			margin: 0 auto 40px
+			font-size: 18px
+			& + p
+				max-width: 100%
+				font-size: 22px
+				margin-bottom: 30px
+				color: $main_color
+		.why_wear_out_rail_item
+			height: 305px
+			&:last-of-type
+				margin-bottom: 90px
+//	Секция buy
+.buy
+	min-height: 730px
+	background: url('../img/buy_bg.jpg') center top no-repeat
+	text-align: center
+	h1
+		font-size: 48px
+		margin-top: 246px
+		margin-bottom: 40px
+	p
+		font-size: 17px
+		color: #fff
+	a
+		margin-top: 131px
+		display: inline-block
+		@extend %main_btn
+		&:hover
+			@extend %main_btn_hover	
+		&:active
+			@extend %main_btn_active
+		&:focus
+			@extend %main_btn_focus
 //	Секция
 //	Секция
 //	Секция
