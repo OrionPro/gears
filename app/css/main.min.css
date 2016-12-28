@@ -1380,7 +1380,7 @@
 :-ms-input-placeholder{color:#666;opacity:1}
 body input:focus:required:invalid,body input:required:valid,body textarea:focus:required:invalid,body textarea:required:valid{color:#666}
 [off-canvas]{-webkit-transition:-webkit-transform .4s;transition:-webkit-transform .4s;transition:transform .4s;transition:transform .4s,-webkit-transform .4s;overflow:auto;-webkit-overflow-scrolling:touch}
-nav[canvas]{top:53px;right:114px;z-index:101}
+nav[canvas]{top:53px;right:117px;z-index:101}
 nav[canvas=header_top]{display:block;width:100%;top:0;left:0;right:0;z-index:100;-webkit-transition:.5s;transition:.5s}
 nav[canvas=header_top].fixed{background-color:rgba(0,0,0,.5);height:50px}
 nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_nav{margin-top:14px;-webkit-transition:.5s;transition:.5s}
@@ -1400,7 +1400,6 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .intermediate .intermediate_wrap{margin-top:40px}
 .intermediate .intermediate_wrap form{text-align:center;overflow:hidden;margin-top:65px}
 .intermediate .intermediate_wrap .intermediate_item{display:inline-block;text-align:left;margin-bottom:40px}
-.hydropower_you_can,.our_partners .owl-item,.what_customers_think{text-align:center}
 .intermediate .intermediate_wrap .intermediate_item input{width:263px;height:37px;border:none;border-bottom:1px solid #fff;background:0 0;color:#9a9a9a;margin-left:10px;padding:0 0 0 9px;font-size:18px}
 .intermediate .intermediate_wrap .intermediate_item input::-webkit-input-placeholder{color:#9a9a9a}
 .intermediate .intermediate_wrap .intermediate_item input:-moz-placeholder{color:#9a9a9a}
@@ -1408,15 +1407,17 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .intermediate .intermediate_wrap .intermediate_item input:-ms-input-placeholder{color:#9a9a9a}
 .intermediate .intermediate_wrap .intermediate_item input:active,.intermediate .intermediate_wrap .intermediate_item input:focus{outline:0}
 .intermediate .intermediate_wrap input[type=submit]{border:none;margin-top:7px;margin-left:15px}
-.our_partners{min-height:450px}
+.our_partners{min-height:450px;background-color:#fff}
 .our_partners .container{position:relative}
 .our_partners h2{margin-top:103px;margin-bottom:60px}
 .our_partners .our_partners_slider{max-width:963px;margin:30px auto 0;position:relative}
+.our_partners .owl-item{text-align:center}
 .our_partners .owl-item div{text-align:center;display:inline-block}
 .our_partners .customNextBtn{background:url(../img/our_partners_slider_arrow_right.png) no-repeat;width:46px;height:54px;position:absolute;right:-90px;top:-webkit-calc(50% - 16px);top:calc(50% - 16px);cursor:pointer;-webkit-transition:.5s;transition:.5s}
 .our_partners .customNextBtn:hover{background:url(../img/our_partners_slider_arrow_right_hover.png) no-repeat}
 .our_partners .customPrevBtn{background:url(../img/our_partners_slider_arrow_left.png) no-repeat;width:46px;height:54px;position:absolute;left:-90px;top:-webkit-calc(50% - 16px);top:calc(50% - 16px);cursor:pointer;-webkit-transition:.5s;transition:.5s}
 .our_partners .customPrevBtn:hover{background:url(../img/our_partners_slider_arrow_left_hover.png) no-repeat}
+.hydropower_you_can,.what_customers_think{text-align:center;background-color:#fff}
 .our_partners .our_partners_img_wheels{position:absolute;top:-100px;left:-10px}
 .hydropower_you_can{min-height:480px}
 .hydropower_you_can h2{margin-top:53px;margin-bottom:63px}
@@ -1443,7 +1444,7 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .what_customers_think .what_customers_think_item_txt div.social>a:hover{color:#ee343b}
 .what_customers_think .what_customers_think_item_txt div.social>a:hover:before{background:url(../img/what_customers_think_item_txt_img_a_hover.png) no-repeat}
 .what_customers_think .what_customers_think_item_txt div.social>a:before{content:"";width:21px;height:11px;display:inline-block;vertical-align:middle;position:relative;left:-6px;background:url(../img/what_customers_think_item_txt_img_a.png) no-repeat;-webkit-transition:.5s;transition:.5s}
-.map{min-height:715px;position:relative}
+.map{min-height:715px;position:relative;background-color:#fff}
 .map #map{height:100%;width:54.5%;position:absolute;top:0;left:0;z-index:10}
 .map .map_contacts{width:414px;margin-top:90px;float:right}
 .map .map_contacts h2{margin-top:20px;margin-bottom:56px;text-align:left}
@@ -1538,20 +1539,99 @@ label.intermediate_item_label{margin-left:24px}
 .map .map_contacts{width:336px;margin-top:105px}
 }
 @media only screen and (max-width:992px){.header_nav{display:none}
-.header_logo,nav[canvas]{display:block}
+.header_logo,.intermediate .intermediate_wrap .modal_form_input_wrap,nav[canvas]{display:block}
 .header_modal{margin-top:40px}
 .header_logo{margin-top:48px;margin-left:13px}
+.header_title h1{font-size:60px;text-align:center;margin-top:192px;margin-left:0;margin-bottom:30px}
+.header_title p{text-align:center;margin:0 auto;font-size:16px;max-width:590px;line-height:1.4}
+.header_btn{margin-top:53px;text-align:center;margin-left:0}
+.header_title_img{bottom:-313px}
+.header_title_img img{width:67%;left:86px}
+.header_item_circle{margin-top:310px}
+.header_item_circle .header_item_circle_img{left:-webkit-calc(50% - 65px);left:calc(50% - 65px)}
+.header_item_circle .header_item_circle_img svg{width:130px;height:auto}
+.header_item_circle span{font-size:44px}
+.header_item_circle p{font-size:18px;margin-top:0}
+.reliable_service .reliable_service_item p{font-size:15px}
+.intermediate{min-height:470px}
+.intermediate .intermediate_wrap .intermediate_item{margin-top:-10px}
+.intermediate .intermediate_wrap .intermediate_item input{width:100%;height:30px;font-size:16px;margin-left:0}
+.intermediate .intermediate_wrap input[type=submit]{width:221px;height:45px;line-height:45px}
+label.intermediate_item_label{margin-left:0;margin-top:10px}
+.modal_form_input_wrap .modal_input_error{right:-9px;top:38px}
+.our_partners .our_partners_img_wheels{top:-91px;left:-17px}
+.our_partners .our_partners_slider{max-width:590px;margin-top:-26px}
+.our_partners .customNextBtn,.our_partners .customPrevBtn{-webkit-transform:scale(.8);-ms-transform:scale(.8);transform:scale(.8)}
+.our_partners .customPrevBtn{left:-75px}
+.our_partners .customNextBtn{right:-75px}
+.hydropower_you_can h2{margin-top:20px}
+.hydropower_you_can .hydropower_you_can_item p{font-size:18px;margin-top:27px}
+.hydropower_you_can .hydropower_you_can_item a{width:100%;height:45px;margin-top:16px}
+.what_customers_think .what_customers_think_item_wrap_inner:last-of-type .what_customers_think_item:last-of-type{margin-bottom:136px}
+.what_customers_think h2{margin-top:0;line-height:1.4}
+.what_customers_think .what_customers_think_item{margin-bottom:0}
+.what_customers_think .what_customers_think_item_img{width:110px}
+.what_customers_think .what_customers_think_item_txt{width:215px}
+.what_customers_think .what_customers_think_item_txt h3{font-size:16px}
+.what_customers_think .what_customers_think_item_txt .what_customers_think_item_action a,.what_customers_think .what_customers_think_item_txt div.social>a,.what_customers_think .what_customers_think_item_txt p{font-size:12px}
+.map{min-height:690px}
+.map .map_contacts{width:301px;margin-top:79px}
+.map #map{width:55%}
 }
-@media only screen and (max-width:768px){.animated{-webkit-transition-property:none!important;transition-property:none!important;-ms-transform:none!important;-webkit-transform:none!important;transform:none!important;-webkit-animation:none!important;animation:none!important}
-.header_title h1{font-size:30px;margin-top:40px}
-.header_modal{margin-top:40px}
+@media only screen and (max-width:767px){.header_modal,.header_title h1{margin-top:40px}
+.header_title h1,.header_title p,h2{padding-left:15px;padding-right:15px}
+.animated{-webkit-transition-property:none!important;transition-property:none!important;-ms-transform:none!important;-webkit-transform:none!important;transform:none!important;-webkit-animation:none!important;animation:none!important}
 [off-canvas*=left]{width:255px}
+nav[canvas]{top:50px;right:30px;-webkit-transition:.5s;transition:.5s}
+nav[canvas].fixed{top:12px}
+nav[canvas=header_top]{top:0}
+nav[canvas=header_top].fixed{top:0;height:70px}
+nav[canvas=header_top].fixed .header_top{margin-top:25px}
+.header_title h1{margin:193px auto 10px;font-size:27px}
+.header_title p{margin-top:46px;font-size:14px;line-height:1.7}
+.header_title span{font-size:14px}
+.header_btn{margin-top:40px}
+.header_btn a{display:block;margin:auto}
+.header_btn a:first-of-type{margin:0 auto 20px}
+.header_btn a+a{display:block}
+.header{background:url(../img/header_bg_768.jpg) center top no-repeat #fff}
+.header_title_img{position:static;left:0;right:0;margin:auto}
+.header_title_img img{width:349px;left:0;right:0;bottom:16px}
+.header_item_circle{margin-top:0;display:block;margin-bottom:50px}
+.header_item_circle:last-of-type{padding-bottom:80px}
+h2{font-size:24px}
+.reliable_service .reliable_service_item{margin-top:41px;margin-bottom:30px}
+.reliable_service{min-height:940px}
+.our_partners .our_partners_img_wheels{top:-60px;right:0;left:0;text-align:center}
+.our_partners .our_partners_img_wheels img{width:320px}
+.our_partners .our_partners_slider{max-width:200px}
+.intermediate .intermediate_wrap input[type=submit]{margin-bottom:80px;margin-top:20px}
+.our_partners h2{margin-top:200px}
+.our_partners .customPrevBtn{left:-65px}
+.our_partners .customNextBtn{right:-65px}
+.hydropower_you_can h2{margin-top:80px}
+.hydropower_you_can .hydropower_you_can_item{margin-bottom:40px}
+.hydropower_you_can .hydropower_you_can_item a{width:220px}
+.what_customers_think h2{margin-top:100px}
+.what_customers_think .what_customers_think_item{width:400px;display:block;margin:0 auto 40px;overflow:hidden}
+.what_customers_think .what_customers_think_item_txt{width:230px}
+.what_customers_think .what_customers_think_item_txt p{max-height:64px}
+.map #map{position:static;width:100%;height:350px}
+.map .map_contacts{float:left;padding-left:30px}
+.footer .footer_copyright{display:block;float:none;margin-left:0}
+.footer .footer_copyright2{display:block;float:none}
+.footer .footer_copyright2 a{margin-right:10px}
+.footer a{left:0}
 }
 @media only screen and (max-width:520px){.dm-modal,.dm-modal input[type=submit]{width:100%}
 }
 @media only screen and (max-width:480px){.header_title h1{font-size:26px}
 .modal_form_input_wrap .modal_input_error{right:0}
 .intermediate .intermediate_title h3{font-size:20px}
+.what_customers_think .what_customers_think_item{width:290px;display:block;margin:auto}
+.what_customers_think .what_customers_think_item .what_customers_think_item_txt{width:125px}
+.what_customers_think .what_customers_think_item .what_customers_think_item_txt div.social>a{font-size:10px}
+.header_title_img img{width:320px}
 }
 @media only screen and (min-width:1200px){.container{width:1200px}
 }

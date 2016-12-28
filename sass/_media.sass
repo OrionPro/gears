@@ -138,10 +138,131 @@
 	.header_logo
 		margin-top: 48px
 		margin-left: 13px
+	.header_title
+		h1
+			font-size: 60px
+			text-align: center
+			margin-top: 192px
+			margin-left: 0px
+			margin-bottom: 30px
+		p
+			text-align: center
+			margin: 0 auto 0
+			font-size: 16px
+			max-width: 590px
+			line-height: 1.4
+	.header_btn
+		margin-top: 53px
+		text-align: center
+		margin-left: 0
+	.header_title_img
+		bottom: -313px
+		img
+			width: 67%
+			left: 86px
+	.header_item_circle
+		margin-top: 310px
+		.header_item_circle_img
+			left: calc(50% - 65px)
+			svg
+				width: 130px
+				height: auto
+	.header_item_circle
+		span
+			font-size: 44px
+		p
+			font-size: 18px
+			margin-top: 0
+	.reliable_service
+		.reliable_service_item
+			p
+				font-size: 15px
+
+	.intermediate
+		min-height: 470px
+		.intermediate_wrap
+			.modal_form_input_wrap
+				display: block
+			.intermediate_item
+				margin-top: -10px
+				input
+					width: 100%
+					height: 30px
+					font-size: 16px
+					margin-left: 0
+			input[type=submit]
+				width: 221px
+				height: 45px
+				line-height: 45px
+	label.intermediate_item_label
+		margin-left: 0
+		margin-top: 10px
+	.modal_form_input_wrap
+		.modal_input_error
+			right: -9px
+			top: 38px
+
+	.our_partners
+		.our_partners_img_wheels
+			top: -91px
+			left: -17px
+		.our_partners_slider
+			max-width: 590px
+			margin-top: -26px
+		.customPrevBtn, .customNextBtn
+			transform: scale(0.8)
+		.customPrevBtn
+			left: -75px
+		.customNextBtn
+			right: -75px
+	.hydropower_you_can
+		h2
+			margin-top: 20px
+		.hydropower_you_can_item
+			p
+				font-size: 18px
+				margin-top: 27px
+			a
+				width: 100%
+				height: 45px
+				margin-top: 16px
+	.what_customers_think
+		.what_customers_think_item_wrap_inner
+			&:last-of-type
+				.what_customers_think_item
+					&:last-of-type
+						margin-bottom: 136px
+		h2
+			margin-top: 0
+			line-height: 1.4
+		.what_customers_think_item
+			margin-bottom: 0
+		.what_customers_think_item_img
+			width: 110px
+		.what_customers_think_item_txt
+			width: 215px
+			h3
+				font-size: 16px
+			p
+				font-size: 12px
+			.what_customers_think_item_action
+				a
+					font-size: 12px
+			div.social>a
+				font-size: 12px
+
+	.map
+		min-height: 690px
+		.map_contacts
+			width: 301px
+			margin-top: 79px
+		#map
+			width: 55%
+
 
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 767px)
 	
 	/*Disable Animation on Mobile Devices*/
 	.animated
@@ -172,7 +293,142 @@
 		margin-top: 40px
 	[off-canvas*=left]
 		width: 255px
+	.header_title_img
+		position: static
+	nav[canvas]
+		top: 50px
+		right: 30px
+		transition: 0.5s
+		&.fixed
+			top: 12px
 
+	nav[canvas=header_top]
+		top: 0
+		&.fixed
+			top: 0
+			height: 70px
+			.header_top
+				margin-top: 25px
+	.header_title
+		h1
+			padding-left: 15px
+			padding-right: 15px
+			margin: 193px auto 10px
+			font-size: 27px
+		p
+			padding-left: 15px
+			padding-right: 15px
+			margin-top: 46px
+			font-size: 14px
+			line-height: 1.7
+		span
+			font-size: 14px
+	.header_btn
+		margin-top: 40px
+		a
+			display: block
+			margin: auto
+			&:first-of-type
+				margin-right: 0
+				margin: 0 auto 20px
+			& + a
+				display: block
+	.header
+		background: #fff url('../img/header_bg_768.jpg') center top no-repeat
+	.header_title_img
+		left: 0
+		right: 0
+		margin: auto
+		img
+			width: 349px
+			left: 0
+			right: 0
+			bottom: 16px
+
+	.header_item_circle_wrap
+	.header_item_circle
+		margin-top: 0
+		display: block
+		margin-bottom: 50px
+		&:last-of-type
+			padding-bottom: 80px
+	.our_partners
+		.customNextBtn
+			right: 0
+		.customPrevBtn
+			left: 0
+	h2
+		font-size: 24px
+		padding-left: 15px
+		padding-right: 15px	
+	.reliable_service
+		.reliable_service_item
+			margin-top: 41px
+			margin-bottom: 30px
+	.reliable_service
+		min-height: 940px
+	.our_partners 
+		.our_partners_img_wheels
+			top: -60px
+			right: 0
+			left: 0
+			text-align: center
+			img
+				width: 320px
+		.our_partners_slider
+			max-width: 200px
+	.intermediate
+		.intermediate_wrap
+			input[type=submit]
+				margin-bottom: 80px
+				margin-top: 20px	
+	.our_partners
+		h2
+			margin-top: 200px
+		.customPrevBtn
+			left: -65px
+		.customNextBtn
+			right: -65px
+	.hydropower_you_can
+		h2
+			margin-top: 80px
+	.hydropower_you_can
+		.hydropower_you_can_item
+			margin-bottom: 40px
+			a
+				width: 220px
+	.what_customers_think
+		h2
+			margin-top: 100px
+		.what_customers_think_item
+			width: 400px
+			display: block
+			margin: 0 auto 40px
+			overflow: hidden
+		.what_customers_think_item_txt
+			width: 230px
+			p
+				max-height: 64px
+	.map
+		#map
+			position: static
+			width: 100%
+			height: 350px
+		.map_contacts
+			float: left
+			padding-left: 30px
+	.footer
+		.footer_copyright
+			display: block
+			float: none
+			margin-left: 0
+		.footer_copyright2
+			display: block
+			float: none
+			a
+				margin-right: 10px
+		a
+			left: 0
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 520px)
 	/**/
@@ -195,7 +451,18 @@
 		.intermediate_title
 			h3
 				font-size: 20px
-
+	.what_customers_think
+		.what_customers_think_item
+			width: 290px
+			display: block
+			margin: auto
+			.what_customers_think_item_txt
+				width: 125px
+				div.social>a
+					font-size: 10px
+	.header_title_img
+		img
+			width: 320px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

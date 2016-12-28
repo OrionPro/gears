@@ -28,10 +28,12 @@ $(window).scroll(function() {
     }
     if ($(window).scrollTop() > 0) {
        $('nav[canvas=header_top]').addClass('fixed');       
+       $('nav[canvas]').addClass('fixed');       
        $('.header_logo span').hide();       
     }
     else if ($(window).scrollTop() < 30){
         $('nav[canvas=header_top]').removeClass('fixed');
+        $('nav[canvas]').removeClass('fixed'); 
         $('.header_logo span').show(); 
     }
     $('.animated').each(function() {
@@ -200,9 +202,11 @@ $(document).ready(function() {
     //  Активация слайдера
     $(".owl-carousel").owlCarousel({
         loop: true,
-        items: 5,
         dots: false,
         responsive:{
+            0:{
+                items:1
+            },
             750:{
                 items:4
             },
