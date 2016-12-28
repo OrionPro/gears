@@ -1380,7 +1380,7 @@
 :-ms-input-placeholder{color:#666;opacity:1}
 body input:focus:required:invalid,body input:required:valid,body textarea:focus:required:invalid,body textarea:required:valid{color:#666}
 [off-canvas]{-webkit-transition:-webkit-transform .4s;transition:-webkit-transform .4s;transition:transform .4s;transition:transform .4s,-webkit-transform .4s;overflow:auto;-webkit-overflow-scrolling:touch}
-nav[canvas]{top:20px;right:20px;z-index:101}
+nav[canvas]{top:53px;right:114px;z-index:101}
 nav[canvas=header_top]{display:block;width:100%;top:0;left:0;right:0;z-index:100;-webkit-transition:.5s;transition:.5s}
 nav[canvas=header_top].fixed{background-color:rgba(0,0,0,.5);height:50px}
 nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_nav{margin-top:14px;-webkit-transition:.5s;transition:.5s}
@@ -1540,6 +1540,7 @@ label.intermediate_item_label{margin-left:24px}
 @media only screen and (max-width:992px){.header_nav{display:none}
 .header_logo,nav[canvas]{display:block}
 .header_modal{margin-top:40px}
+.header_logo{margin-top:48px;margin-left:13px}
 }
 @media only screen and (max-width:768px){.animated{-webkit-transition-property:none!important;transition-property:none!important;-ms-transform:none!important;-webkit-transform:none!important;transform:none!important;-webkit-animation:none!important;animation:none!important}
 .header_title h1{font-size:30px;margin-top:40px}
