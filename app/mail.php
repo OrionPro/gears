@@ -8,9 +8,7 @@ if ($_POST) {
     $name = $_POST["name"];
     $phone = $_POST["phone"];
     $email = $_POST["email"];
-    $textarea = $_POST["textarea"];
     $form_name = $_POST["form_name"];
-    $services = ($_POST["services"]);
    
 
     $images = array();
@@ -19,11 +17,6 @@ if ($_POST) {
     $id_form = $_POST['form_type'];
     $json['form_type'] = $id_form;
 
-    if(isset($_POST["services"])) {
-        $services = $_POST["services"];
-    } else { 
-        $services = "Отсутствует";   
-    }
 
      if (isset($_POST['form_name']) and $_POST['form_name'] != "") {
         $form_name = $_POST['form_name'];
@@ -32,10 +25,7 @@ if ($_POST) {
         <div style="font-size: 18px; margin-bottom: 10px">Из формы: ' . '<span style="font-size: 18px"> ' . $form_name . '</span>' . '</div>';
     }
 
-    if (isset($_POST['amount_slider']) and $_POST['amount_slider'] != "") {
-        $amount_slider = $_POST['amount_slider'];
-        $message .= '<div style="font-size: 18px; margin-bottom: 10px; padding-left: 10px">Бюджет: ' . $amount_slider . '</div>';
-    }
+
     if (isset($_POST['phone']) and $_POST['phone'] != "") {
         $phone = $_POST['phone'];
         $message .= '<div style="font-size: 18px; margin-bottom: 10px; padding-left: 10px">Телефон: ' . $phone . '</div>';
@@ -44,10 +34,7 @@ if ($_POST) {
         $email = $_POST['email'];
         $message .= '<div style="font-size: 18px; margin-bottom: 10px; padding-left: 10px">Email: ' . $email . '</div>';
     }
-    if (isset($_POST['textarea']) and $_POST['textarea'] != "") {
-        $textarea = $_POST['textarea'];
-        $message .= '<div style="font-size: 18px; margin-bottom: 10px; padding-left: 10px">Размеры кухни: ' . $textarea . '</div>';
-    }
+
     if (isset($_POST['name']) and $_POST['name'] != "") {
         $name = $_POST['name'];
         $message .= '<div style="font-size: 18px; margin-bottom: 10px; padding-left: 10px">Имя: ' . $name . '</div>';

@@ -124,6 +124,34 @@
 		.map_contacts
 			width: 336px
 			margin-top: 105px
+	.why_wear_out_rail
+		.why_wear_out_rail_item
+			text-align: center
+			h3
+				font-size: 19px
+				line-height: 1.2
+				margin-top: 30px
+				margin-bottom: 10px
+			p
+				font-size: 14px
+			.why_wear_out_rail_item_img
+				img
+					margin: auto
+
+	.repair_if_necessary
+		min-height: 500px
+		.repair_if_necessary_item
+			h3
+				font-size: 19px
+			p
+				font-size: 14px
+	.how_do_we_repair
+		.how_do_we_repair_item_img
+			width: 220px
+		.how_do_we_repair_item_txt
+			width: 190px
+			h3
+				font-size: 18px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
@@ -194,6 +222,12 @@
 				width: 221px
 				height: 45px
 				line-height: 45px
+	.diagnostics
+		&.intermediate
+			-webkit-background-size: cover
+			-moz-background-size: cover
+			background-size: cover
+			
 	label.intermediate_item_label
 		margin-left: 0
 		margin-top: 10px
@@ -258,9 +292,32 @@
 			margin-top: 79px
 		#map
 			width: 55%
-
-
-
+	nav[canvas]
+		top: 50px
+		right: 30px
+		transition: 0.5s
+		&.fixed
+			top: 12px
+	nav[canvas=header_top]
+		top: 0
+		&.fixed
+			height: 70px
+			top: 0
+			.header_top
+				margin-top: 25px
+	.how_do_we_repair
+		.how_do_we_repair_item
+			margin-bottom: 90px
+			&:nth-of-type(2n+1)
+				.how_do_we_repair_item_img
+					margin: auto
+					float: none
+		.how_do_we_repair_item_txt
+			margin: 60px auto 0
+			float: none
+		.how_do_we_repair_item_img
+			margin: auto
+			float: none
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 	
@@ -306,9 +363,6 @@
 		top: 0
 		&.fixed
 			top: 0
-			height: 70px
-			.header_top
-				margin-top: 25px
 	.header_title
 		h1
 			padding-left: 15px
@@ -429,15 +483,59 @@
 				margin-right: 10px
 		a
 			left: 0
+	.repair_if_necessary
+		.repair_if_necessary_item
+			margin-bottom: 70px
+	.diagnostics
+		h1
+			font-size: 27px
+			padding-left: 15px
+			padding-right: 15px
+		p
+			font-size: 16px
+			padding-left: 15px
+			padding-right: 15px
+	.buy
+		h1
+			font-size: 27px
+			padding-left: 15px
+			padding-right: 15px
+		p
+			font-size: 16px
+			padding-left: 15px
+			padding-right: 15px
+	.why_wear_out_rail
+		&.repair_time
+			p
+				padding-left: 15px
+				padding-right: 15px
+				& + p
+					padding-left: 15px
+					padding-right: 15px
 /* Extra Small Devices, Phones */
+@media only screen and (max-width : 560px)
+	/**/
+	.close
+		right: 0px	
 @media only screen and (max-width : 520px)
 	/**/
-		
+	
 	.dm-modal
 		width: 100%
+		h3
+			font-size: 27px
+		p
+			font-size: 16px
+		form
+			padding-left: 15px
+			padding-right: 15px
+
 	.dm-modal
 		input[type=submit]
 			width: 100%
+	.popup3
+		.dm-modal
+			
 @media only screen and (max-width : 480px)
 	/**/
 
@@ -463,6 +561,7 @@
 	.header_title_img
 		img
 			width: 320px
+	
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/

@@ -8,6 +8,11 @@ $(function() {
     // };
 });
 $(window).resize(function() {
+    // убираем br из параграфов
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        $(".why_wear_out_rail .why_wear_out_rail_item p br").remove();
+        $(".diagnostics h1 br").remove();
+    }
 
 });
 
@@ -25,16 +30,28 @@ $(window).scroll(function() {
             $('.header_item_circle .num3').animateNumber({ number: 6 }, 2000);
         }
         limit++;
+
     }
+    if ($(window).scrollTop() >= 100) {
+        tl2.resume();
+        tl3.resume();
+
+
+    }
+    if ($(window).scrollTop() >= 100) {
+
+
+    }
+
+
     if ($(window).scrollTop() > 0) {
-       $('nav[canvas=header_top]').addClass('fixed');       
-       $('nav[canvas]').addClass('fixed');       
-       $('.header_logo span').hide();       
-    }
-    else if ($(window).scrollTop() < 30){
+        $('nav[canvas=header_top]').addClass('fixed');
+        $('nav[canvas]').addClass('fixed');
+        $('.header_logo span').hide();
+    } else if ($(window).scrollTop() < 30) {
         $('nav[canvas=header_top]').removeClass('fixed');
-        $('nav[canvas]').removeClass('fixed'); 
-        $('.header_logo span').show(); 
+        $('nav[canvas]').removeClass('fixed');
+        $('.header_logo span').show();
     }
     $('.animated').each(function() {
         var imagePos = $(this).offset().top;
@@ -119,23 +136,31 @@ if ('addEventListener' in document) {
 })($);
 
 var tl1 = new TimelineMax(); // анимация кругов
+var tl2 = new TimelineMax(); // анимация header
+var tl3 = new TimelineMax(); // анимация header
 
 $(document).ready(function() {
+    // убираем br из параграфов
+    if (window.matchMedia("(max-width: 768px)").matches) {
+        $(".why_wear_out_rail .why_wear_out_rail_item p br").remove();
+        $(".diagnostics h1 br").remove();
+    }
+
+
     // делаем фиксированное меню 
     if ($(window).scrollTop() > 0) {
-       $('nav[canvas=header_top]').addClass('fixed');        
+        $('nav[canvas=header_top]').addClass('fixed');
     }
 
     // парсит параграфы в what_customers_think_item и показывает от количества букв в параграфе ссылки показать весь отзыв или нет
     var elem = $('.what_customers_think_item_txt');
     elem.each(function() {
         var pars = $(this).find('.parse').text().split('').length,
-            link = $(this).find('.what_customers_think_item_action'); 
-         
+            link = $(this).find('.what_customers_think_item_action');
+
         if (pars >= 361) {
             link.show();
-        } 
-        else if (pars <= 361){
+        } else if (pars <= 361) {
             link.hide();
         }
     });
@@ -154,23 +179,43 @@ $(document).ready(function() {
 
 
     tl1.pause();
+    tl2.pause();
+    tl3.pause();
 
-    function readyTimeLineGo() {
-        if ($(window).scrollTop() >= 100) {
-            tl1.resume();
-            // активация тайм линий при загрузке с измерением скролла
 
-            if (limit == 0) {
+    if ($(window).scrollTop() >= 100) {
+        tl1.resume();
+        // активация тайм линий при загрузке с измерением скролла
 
-                $('.header_item_circle .num').animateNumber({ number: 10 }, 2000);
-                $('.header_item_circle .num2').animateNumber({ number: 972 }, 2000);
-                $('.header_item_circle .num3').animateNumber({ number: 6 }, 2000);
-            }
-            limit++;
+        if (limit == 0) {
+
+            $('.header_item_circle .num').animateNumber({ number: 10 }, 2000);
+            $('.header_item_circle .num2').animateNumber({ number: 972 }, 2000);
+            $('.header_item_circle .num3').animateNumber({ number: 6 }, 2000);
         }
+        limit++;
+
     }
 
-    readyTimeLineGo();
+    tl1.from(".path4136", 2, {  drawSVG: "0%" }, 0.4).
+        from(".header_item_circle_img", 2, { autoAlpha: 0}, 0);
+    
+
+    function readyTimeLineGo() {
+
+    }
+
+    if (window.matchMedia("(min-width: 992px)").matches) {
+
+        readyTimeLineGo();
+        // Анимация, которая будет работать от 992px
+        tl2.to(".header_title_img", 2, { y: 20 });
+
+        tl3.from(".header_item_circle span", 2, { autoAlpha: 0, y: 20 });
+        
+
+
+    }
 
     var md = new MobileDetect(window.navigator.userAgent);
 
@@ -203,18 +248,18 @@ $(document).ready(function() {
     $(".owl-carousel").owlCarousel({
         loop: true,
         dots: false,
-        responsive:{
-            0:{
-                items:1
+        responsive: {
+            0: {
+                items: 1
             },
-            750:{
-                items:4
+            768: {
+                items: 4
             },
-            992:{
-                items:4
+            992: {
+                items: 4
             },
-            1200:{
-                items:5
+            1200: {
+                items: 5
             }
         }
     });
@@ -232,7 +277,6 @@ $(document).ready(function() {
     });
 
 
-    tl1.from(".path4136", 2, { drawSVG: "0%" }, 0.4);
 
     // Карта
     //  гугл карта
@@ -325,7 +369,7 @@ $(document).ready(function() {
         var txt = $(this).data('info');
         // var title =  $(this).data('title'); // для изменения title в модалке
         $(".popup[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
-        $(".popup[data-modal=" + id + "] input[name=form_name").val(txt);
+        $(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
         // $(".popup[data-modal="+id+"] h2").html(title); // прописать в ссылку data-title="нужный title"
 
         if (window.matchMedia("(min-width: 992px)").matches) {
@@ -456,11 +500,15 @@ $(document).ready(function() {
 
                         if (data['form_type'] == 'modal') {
                             $('.dm-modal form').hide();
+                            $('.dm-modal .close').hide();
+                            $('.dm-modal h3').hide();
+                            $('.dm-modal p:not(".success_mail")').hide();
                             form.trigger('reset');
                             $('.dm-modal .success_mail').addClass('active'); //пишем что всё ок
                             setTimeout(function() {
                                 form.parents('.popup').hide("fade", 500);
                                 $('.dm-modal .success_mail').removeClass('active');
+                                $('.dm-modal .close').show();
                                 //$("body").css({ "overflow": "inherit", "padding-right": "0" });
                             }, 3000);
                         }
@@ -489,150 +537,7 @@ $(document).ready(function() {
         }
         return false; // вырубаем стандартную отправку формы
     });
-    var files;
-    $('input[type=file]').change(function() {
-        files = this.files;
-        //alert(files);
-    });
 
-    //  Отправка форм с файлом
-    $("#form3").on('submit', function(e) { // перехватываем все при событии отправки
-        e.preventDefault();
-        var $data = new FormData();
-        var form = $(this);
-        var error = [];
-        $.each(files, function(key, value) {
-            if (!this.type.match(/(.png)|(.jpeg)|(.jpg)|(.gif)$/i) || (this.size / 1024).toFixed(0) > 1524) {
-                alert("Неправильный формат графического файла. Или слишком большой размер. Размер не должен превышать 1 мегабайт!");
-                return false;
-            } else {
-
-            }
-            $data.append(key, value);
-        });
-
-        $inputs = $("#form3").find('input[type=hidden]');
-        $textarea = $("#form3").find('textarea');
-        $.each($inputs, function(key, value) {
-            $data.append($(this).attr('name'), $(this).val());
-        });
-
-        $data.append($textarea.attr('name'), $textarea.val());
-
-        form.find('.modal_form_input').each(function() { // пробежим по каждому полю в форме
-
-            if ($(this).val() == '') { // если находим пустое
-                $(this).siblings().show("fade", 500);
-                error.push(true); // ошибка
-            } else if ($(this).val() !== '') { // если находим не пустое
-                $(this).siblings().hide("fade", 500)
-                error.push(false); // нет ошибки
-            }
-            $(this).focus(function() {
-                $(this).siblings().hide("fade", 500)
-            });
-
-        });
-        form.find('.modal_form_phone').each(function() { // пробежим по каждому полю в форме
-            var pattern = /^(\+|d+)*\d[\d\(\)\-]{4,14}\d$/;
-            if ($(this).val() == '') { // если пустое
-                $(this).siblings().show("fade", 500);
-                error.push(true); // ошибка 
-                if ($(this).siblings().hasClass('input_error_phone')) {
-                    $(this).siblings().removeClass('input_error_phone').text("").prepend("Заполните поле<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
-                }
-            } else if ($(this).val() !== '') {
-                if ($(this).val().match(pattern)) {
-                    $(this).siblings().hide("fade", 500);
-                    error.push(false); // нет ошибок
-                } else {
-                    $(this).siblings().show("fade", 500).addClass('input_error_phone').text("").prepend("Введите правильный телефон<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
-                    error.push(true); // ошибка  
-                }
-            }
-            $(this).focus(function() {
-                $(this).siblings().hide("fade", 500);
-            });
-
-        });
-        form.find('.modal_form_email').each(function() { // пробежим по каждому полю в форме
-            var pattern = /^(([a-zA-Z0-9]|[!#$%\*\/\?\|^\{\}`~&'\+=-_])+\.)*([a-zA-Z0-9]|[!#$%\*\/\?\|^\{\}`~&'\+=-_])+@([a-zA-Z0-9-]+\.)+[a-zA-Z0-9-]+$/;
-            if ($(this).val() == '') { // если пустое
-                $(this).siblings().show("fade", 500);
-                error.push(true); // ошибка
-                if ($(this).siblings().hasClass('input_error_email')) {
-                    $(this).siblings().removeClass('input_error_email').text("").prepend("Заполните поле<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
-                }
-
-            } else if ($(this).val() !== '') {
-                if ($(this).val().match(pattern)) {
-                    $(this).siblings().hide("fade", 500).removeClass('input_error_email');
-                    error.push(false); // нет ошибок
-                } else {
-                    $(this).siblings().show("fade", 500).addClass('input_error_email').text("").prepend("Введите правильный Email<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
-                    error.push(true); // ошибка  
-                }
-            }
-            $(this).focus(function() {
-                $(this).siblings().hide("fade", 500);
-            });
-
-        });
-
-
-        if (files === undefined) {
-            $('.fileLoad input').val('Файл не выбран!');
-            $('.file-load-block input[type=text]').css('border', '1px solid red');
-            error.push(true); // ошибка  
-        }
-
-        var erorr_finish = 0;
-
-        for (var i = 0; i < error.length; i++) {
-            if (error[i] == false) {
-                erorr_finish = erorr_finish + 1;
-            }
-
-            //console.log(error[i]);
-        }
-        //console.log(erorr_finish);
-        var size = error.length - 1;
-        if (erorr_finish > size) {
-            $.ajax({
-                url: 'mail.php',
-                type: 'POST',
-                contentType: false,
-                processData: false,
-                dataType: 'json',
-                data: $data,
-                beforeSend: function(loading) {
-                    $('.fileLoad input').val('Файл загружается');
-                },
-                success: function(data) {
-                    $('.dm-modal .sucess_mail').show('fade', 500);
-                    $('.popup2 .close').hide();
-                    $('.fileLoad input').val('Файл загружен!');
-                    $('.file-load-block input[type=text]').css('color', '#b2d04e');
-                    $('.popup2').show().delay(2000).fadeOut(
-                        function() {
-                            $('.popup2').removeClass('active');
-                            form.trigger('reset');
-                            $('.dm-modal .sucess_mail').addClass('active');
-                            $("#win2 .close").trigger('click');
-                            $('.popup2 .close').show();
-                            $('.fileLoad input').val('Выберите файл');
-                            files = undefined;
-                            $('.file-load-block input[type=text]').css('color', '#fff)');
-                            $('.file-load-block input[type=text]').css('border', '1px solid #fff');
-                        }
-                    );
-
-
-
-                }
-            });
-        }
-    });
 
 });
 

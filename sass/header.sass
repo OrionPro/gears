@@ -40,7 +40,7 @@ p
 .popup2
 	width: 100%
 	height: 100%
-	background: rgba(0, 0, 0, 0.65)	
+	background: rgba(34,36,44, 0.95)
 	position: fixed
 	top: 0
 	left: 0
@@ -50,7 +50,7 @@ p
 .popup
 	width: 100%
 	height: 100%
-	background: rgba(0, 0, 0, 0.65)	
+	background: rgba(34,36,44, 0.95)
 	position: fixed
 	top: 0
 	left: 0
@@ -59,6 +59,7 @@ p
 	z-index: 1000
 	&.pop3
 		.dm-modal
+			margin-top: 50px
 			width: inherit
 			padding: 0
 			border: none
@@ -70,6 +71,23 @@ p
 				a
 					font-size: 30px
 					color: #fff
+		.close
+			top: 15px
+		.dm-modal_inner_h1
+			font: 40px $font_Lato_Bold
+			color: $main_color
+			margin-bottom: 30px
+			text-align: center
+		.dm-modal_inner_h2
+			font: 30px $font_Lato_Bold
+			color: $main_color
+			text-align: left
+			margin-top: 10px
+			margin-bottom: 10px
+		p
+			font: 20px
+			color: #fff
+			text-align: left	
 .dm-table
 	display: table
 	width: 100%
@@ -88,20 +106,22 @@ p
 	text-align: center
 
 .dm-modal
-	width: 470px		
+	width: 360px		
 	max-width: 50em
 	display: inline-block
-	padding: 50px 46px 50px 46px
-	border: 3px solid $main_color	
+	padding: 10px 0px 50px 0px	
 	text-align: center
 	position: relative	
 	animation: fade .8s
-	background-color: #fff
-	border-radius: 20px
+	background-color: transparent
 	z-index: 1002
+	form
+		padding-left: 50px
+		padding-right: 50px
 	.modal_form_input_wrap
 		position: relative
 		display: block
+		margin-left: 0
 		.modal_input_error
 			width: 141px
 			height: 35px
@@ -110,8 +130,8 @@ p
 			right: -25px
 			top: 40px
 			padding-left: 10px
-			font: 15px/35px $font_Lato_Light
-			background-color: #F4F4F4
+			font: 14px/35px $font_Lato_Light
+			background-color: #fff
 			border: 1px solid #C8C8C8
 			-webkit-border-radius: 5px
 			border-radius: 5px
@@ -133,33 +153,40 @@ p
 			position: relative
 			background-image: url('../img/modal_error_triangle.png')
 		.modal_error_chest_img
-			top: -33px
+			top: -30px
 			left: 0				
 			height: 9px
 		.modal_error_triangle
 			top: -43px
 			left: 10px				
 			height: 8px			
-		
-
+	h3
+		@include font(#fff, 36px,  $font_Lato_Bold, 1.2)
+		margin-bottom: 10px
+		span
+			color: $main_color		
+	p
+		margin-bottom: 30px
+		font-size: 18px
+		color: #fff
 	label
 		margin-bottom: 7px
-		margin-left: 5px
+		margin-left: 10px
 		text-align: left
 		display: block
 		font: 14px $font_Lato_Light
-		color: $main_txt_color
+		color: #fff
 		&.active
-			color: $main_color
+			color: #fff
 	input
 		width: 100%
 		height: 40px
-		margin-bottom: 10px
-		padding-left: 20px
-		border: none		
-		background-color: #F4F4F4		
-		border-radius: 5px		
-		box-shadow: 0 1px 0 rgba(0,0,2,.28)		
+		margin-bottom: 30px
+		padding-left: 10px
+		border: none
+		color: #fff
+		border-bottom: 1px solid #fff		
+		background-color: transparent		
 		transition: 1s
 		&:focus		
 			outline: 0
@@ -176,7 +203,9 @@ p
 		margin-top: 20px
 		padding-left: 0
 		padding-right: 0
+		border-bottom: none
 		@extend %main_btn
+		width: 100%	
 		&:hover
 			@extend %main_btn_hover		
 		&:active		
@@ -249,10 +278,10 @@ p
 				transform: rotate(180deg)
 .close
 	position: absolute
-	right: 25px
+	right: -90px
 	top: 25px
-	width: 35px
-	height: 36px
+	width: 19px
+	height: 19px
 	display: block
 	background: url('../img/modal_close.png') 0 0 no-repeat
 // конец модального
@@ -409,10 +438,13 @@ label
 			margin-right: 26px
 		&:hover
 			@extend %main_btn_hover	
+			text-decoration: none
 		&:active
 			@extend %main_btn_active
+			text-decoration: none
 		&:focus
 			@extend %main_btn_focus
+			text-decoration: none
 		& + a
 			@extend %main_btn2
 			&:hover

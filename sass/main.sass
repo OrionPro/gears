@@ -9,19 +9,19 @@
 @import "../app/libs/slidebars/slidebars.min"
 
 *::-webkit-input-placeholder
-	color: #666
+	color: #9a9a9a
 	opacity: 1
 
 *:-moz-placeholder
-	color: #666
+	color: #9a9a9a
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: #9a9a9a
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: #9a9a9a
 	opacity: 1
 
 body input:focus:required:invalid,
@@ -35,6 +35,7 @@ body textarea:required:valid
 	transition: transform 0.4s
 	overflow: auto
 	-webkit-overflow-scrolling: touch
+	background-color: #111
 [off-canvas*=left]
 	width: 250px
 [canvas=container]
@@ -67,10 +68,14 @@ nav[canvas=header_top]
 [off-canvas]
 	ul
 		&.menu
-			margin: 0
+			margin: 25px 0 0 0
 			padding: 0
 			display: block
 			list-style: none
+			text-align: center
+			a
+				color: #fff
+				font-size: 24px
 
 
 
@@ -103,6 +108,11 @@ nav[canvas=header_top]
 	min-height: 449px
 	background: url('../img/intermediate_bg.jpg') center top no-repeat
 	background-size: cover
+	background-attachment: fixed
+	&.intermediate_bg2
+		background: url('../img/intermediate_bg2.jpg') center top no-repeat
+		background-size: cover
+		background-attachment: fixed
 	.intermediate_title		
 		h2
 			margin: 108px 0 11px
@@ -375,6 +385,7 @@ nav[canvas=header_top]
 	min-height: 730px
 	background: url('../img/diagnostics_bg.jpg') center top no-repeat
 	text-align: center
+	background-attachment: fixed
 	&.intermediate
 		.intermediate_wrap
 			form
@@ -396,6 +407,7 @@ nav[canvas=header_top]
 //	Секция why_wear_out_rail
 .why_wear_out_rail
 	text-align: center
+	background-color: #fff
 	h2
 		margin-top: 128px
 		margin-bottom: 60px
@@ -406,13 +418,15 @@ nav[canvas=header_top]
 		h3
 			font-size: 21px
 			margin-bottom: 6px
+			font-family: $font_Lato_Bold
 		p
 			font-size: 16px
 			line-height: 1.2
 //	Секция repair_if_necessary
 .repair_if_necessary
 	text-align: center
-	min-height: 547px
+	min-height: 510px
+	background-color: #fff
 	h2
 		margin-top: 92px
 		margin-bottom: 60px
@@ -430,6 +444,7 @@ nav[canvas=header_top]
 			line-height: 1.2
 //	Секция how_do_we_repair
 .how_do_we_repair
+	background-color: #fff
 	h2
 		margin-top: 127px
 	.how_do_we_repair_item_wrap
@@ -439,6 +454,8 @@ nav[canvas=header_top]
 		&:nth-of-type(2n+1)
 			.how_do_we_repair_item_img
 				margin-left: 15px
+		&:last-of-type
+			margin-bottom: 140px
 	.how_do_we_repair_item_img
 		float: left
 		margin-right: 30px
@@ -488,6 +505,7 @@ nav[canvas=header_top]
 	min-height: 730px
 	background: url('../img/buy_bg.jpg') center top no-repeat
 	text-align: center
+	background-attachment: fixed
 	h1
 		font-size: 48px
 		margin-top: 246px

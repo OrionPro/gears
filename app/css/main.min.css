@@ -1360,7 +1360,7 @@
 [canvas=container],[off-canvas],body,html{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}
 [canvas=container]{width:100%;height:100%;overflow-y:auto;position:relative;-webkit-overflow-scrolling:touch;background-color:transparent}
 [canvas=container]:after,[canvas=container]:before{clear:both;content:'';display:table}
-[off-canvas]{overflow-y:auto;background-color:#000;color:#fff}
+[off-canvas]{overflow-y:auto;color:#fff}
 [off-canvas*=top]{width:100%;height:255px;top:0}
 [off-canvas*=right]{width:255px;height:100%;top:0;right:0}
 [off-canvas*=bottom]{width:100%;height:255px;bottom:0}
@@ -1374,18 +1374,19 @@
 @media print{[canvas]{-webkit-transform:translate(0,0)!important;-ms-transform:translate(0,0)!important;transform:translate(0,0)!important}
 [off-canvas]{display:none!important}
 }
-::-webkit-input-placeholder{color:#666;opacity:1}
-:-moz-placeholder{color:#666;opacity:1}
-::-moz-placeholder{color:#666;opacity:1}
-:-ms-input-placeholder{color:#666;opacity:1}
+::-webkit-input-placeholder{color:#9a9a9a;opacity:1}
+:-moz-placeholder{color:#9a9a9a;opacity:1}
+::-moz-placeholder{color:#9a9a9a;opacity:1}
+:-ms-input-placeholder{color:#9a9a9a;opacity:1}
 body input:focus:required:invalid,body input:required:valid,body textarea:focus:required:invalid,body textarea:required:valid{color:#666}
-[off-canvas]{-webkit-transition:-webkit-transform .4s;transition:-webkit-transform .4s;transition:transform .4s;transition:transform .4s,-webkit-transform .4s;overflow:auto;-webkit-overflow-scrolling:touch}
+[off-canvas]{-webkit-transition:-webkit-transform .4s;transition:-webkit-transform .4s;transition:transform .4s;transition:transform .4s,-webkit-transform .4s;overflow:auto;-webkit-overflow-scrolling:touch;background-color:#111}
 nav[canvas]{top:53px;right:117px;z-index:101}
 nav[canvas=header_top]{display:block;width:100%;top:0;left:0;right:0;z-index:100;-webkit-transition:.5s;transition:.5s}
 nav[canvas=header_top].fixed{background-color:rgba(0,0,0,.5);height:50px}
 nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_nav{margin-top:14px;-webkit-transition:.5s;transition:.5s}
 [class*=js-close-],[class*=js-open-],[class*=js-toggle-]{cursor:pointer}
-[off-canvas] ul.menu{margin:0;padding:0;display:block;list-style:none}
+[off-canvas] ul.menu{margin:25px 0 0;padding:0;display:block;list-style:none;text-align:center}
+[off-canvas] ul.menu a{color:#fff;font-size:24px}
 .reliable_service{min-height:580px;background-color:#fff;text-align:center}
 .reliable_service h2{margin-top:111px;margin-bottom:13px}
 .reliable_service p{font-size:18px}
@@ -1393,7 +1394,8 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .reliable_service .reliable_service_item p{margin-top:27px;font-size:20px;line-height:1.2;text-align:center}
 .reliable_service .reliable_service_item .reliable_service_item_img{text-align:center}
 .reliable_service .reliable_service_item .reliable_service_item_img i{font-size:72px;color:#00b6f4}
-.intermediate{min-height:449px;background:url(../img/intermediate_bg.jpg) center top no-repeat;background-size:cover}
+.intermediate{min-height:449px;background:url(../img/intermediate_bg.jpg) center top no-repeat fixed;background-size:cover}
+.intermediate.intermediate_bg2{background:url(../img/intermediate_bg2.jpg) center top no-repeat fixed;background-size:cover}
 .intermediate .intermediate_title h2{margin:108px 0 11px;color:#fff}
 .intermediate .intermediate_title h2 span{color:#ee343b}
 .intermediate .intermediate_title p{font-size:18px;color:#fff;text-align:center}
@@ -1456,7 +1458,8 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .map .map_contacts_item p{font-size:20px}
 .map .map_contacts_item p:first-of-type{font-size:18px;margin-bottom:4px;color:#ee343b}
 .map .map_contacts_item a{font-size:20px;color:#2f3443}
-.diagnostics{min-height:730px;background:url(../img/diagnostics_bg.jpg) center top no-repeat}
+.diagnostics{min-height:730px;background:url(../img/diagnostics_bg.jpg) center top no-repeat fixed}
+.how_do_we_repair,.repair_if_necessary,.why_wear_out_rail{background-color:#fff}
 .diagnostics.intermediate .intermediate_wrap form{margin-top:36px}
 .diagnostics h1{color:#fff;font-size:48px;margin-top:188px;margin-bottom:40px}
 .diagnostics h2{color:#fff;margin-top:77px}
@@ -1464,9 +1467,9 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .diagnostics form{margin-top:60px}
 .why_wear_out_rail h2{margin-top:128px;margin-bottom:60px}
 .why_wear_out_rail .why_wear_out_rail_item{margin-bottom:30px;height:358px;overflow:hidden}
-.why_wear_out_rail .why_wear_out_rail_item h3{font-size:21px;margin-bottom:6px}
+.why_wear_out_rail .why_wear_out_rail_item h3{font-size:21px;margin-bottom:6px;font-family:Lato-Bold,Arial,sans-serif}
 .why_wear_out_rail .why_wear_out_rail_item p{font-size:16px;line-height:1.2}
-.repair_if_necessary{text-align:center;min-height:547px}
+.repair_if_necessary{text-align:center;min-height:510px}
 .repair_if_necessary h2{margin-top:92px;margin-bottom:60px}
 .repair_if_necessary .repair_if_necessary_item{margin-bottom:20px}
 .repair_if_necessary .repair_if_necessary_item .repair_if_necessary_item_img{height:100px}
@@ -1476,6 +1479,7 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .how_do_we_repair .how_do_we_repair_item_wrap{margin-top:75px}
 .how_do_we_repair .how_do_we_repair_item{margin-bottom:75px}
 .how_do_we_repair .how_do_we_repair_item:nth-of-type(2n+1) .how_do_we_repair_item_img{margin-left:15px}
+.how_do_we_repair .how_do_we_repair_item:last-of-type{margin-bottom:140px}
 .how_do_we_repair .how_do_we_repair_item_img{float:left;margin-right:30px}
 .how_do_we_repair .how_do_we_repair_item_txt{width:258px;float:left}
 .how_do_we_repair .how_do_we_repair_item_txt h3{font-size:20px;line-height:1.1;margin-top:0;position:relative;z-index:3}
@@ -1486,7 +1490,7 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .why_wear_out_rail.repair_time p+p{max-width:100%;font-size:22px;margin-bottom:30px;color:#ee343b}
 .why_wear_out_rail.repair_time .why_wear_out_rail_item{height:305px}
 .why_wear_out_rail.repair_time .why_wear_out_rail_item:last-of-type{margin-bottom:90px}
-.buy{min-height:730px;background:url(../img/buy_bg.jpg) center top no-repeat}
+.buy{min-height:730px;background:url(../img/buy_bg.jpg) center top no-repeat fixed}
 .buy h1{font-size:48px;margin-top:246px;margin-bottom:40px}
 .buy p{font-size:17px;color:#fff}
 .footer .footer_copyright2 span,.footer a{font-size:14px;color:#fff}
@@ -1537,6 +1541,16 @@ label.intermediate_item_label{margin-left:24px}
 .map .map_contacts_item p{font-size:17px}
 .map #map{width:58%}
 .map .map_contacts{width:336px;margin-top:105px}
+.why_wear_out_rail .why_wear_out_rail_item{text-align:center}
+.why_wear_out_rail .why_wear_out_rail_item h3{font-size:19px;line-height:1.2;margin-top:30px;margin-bottom:10px}
+.why_wear_out_rail .why_wear_out_rail_item p{font-size:14px}
+.why_wear_out_rail .why_wear_out_rail_item .why_wear_out_rail_item_img img{margin:auto}
+.repair_if_necessary{min-height:500px}
+.repair_if_necessary .repair_if_necessary_item h3{font-size:19px}
+.repair_if_necessary .repair_if_necessary_item p{font-size:14px}
+.how_do_we_repair .how_do_we_repair_item_img{width:220px}
+.how_do_we_repair .how_do_we_repair_item_txt{width:190px}
+.how_do_we_repair .how_do_we_repair_item_txt h3{font-size:18px}
 }
 @media only screen and (max-width:992px){.header_nav{display:none}
 .header_logo,.intermediate .intermediate_wrap .modal_form_input_wrap,nav[canvas]{display:block}
@@ -1557,6 +1571,7 @@ label.intermediate_item_label{margin-left:24px}
 .intermediate .intermediate_wrap .intermediate_item{margin-top:-10px}
 .intermediate .intermediate_wrap .intermediate_item input{width:100%;height:30px;font-size:16px;margin-left:0}
 .intermediate .intermediate_wrap input[type=submit]{width:221px;height:45px;line-height:45px}
+.diagnostics.intermediate{background-size:cover}
 label.intermediate_item_label{margin-left:0;margin-top:10px}
 .modal_form_input_wrap .modal_input_error{right:-9px;top:38px}
 .our_partners .our_partners_img_wheels{top:-91px;left:-17px}
@@ -1577,16 +1592,23 @@ label.intermediate_item_label{margin-left:0;margin-top:10px}
 .map{min-height:690px}
 .map .map_contacts{width:301px;margin-top:79px}
 .map #map{width:55%}
-}
-@media only screen and (max-width:767px){.header_modal,.header_title h1{margin-top:40px}
-.header_title h1,.header_title p,h2{padding-left:15px;padding-right:15px}
-.animated{-webkit-transition-property:none!important;transition-property:none!important;-ms-transform:none!important;-webkit-transform:none!important;transform:none!important;-webkit-animation:none!important;animation:none!important}
-[off-canvas*=left]{width:255px}
 nav[canvas]{top:50px;right:30px;-webkit-transition:.5s;transition:.5s}
 nav[canvas].fixed{top:12px}
 nav[canvas=header_top]{top:0}
-nav[canvas=header_top].fixed{top:0;height:70px}
+nav[canvas=header_top].fixed{height:70px;top:0}
 nav[canvas=header_top].fixed .header_top{margin-top:25px}
+.how_do_we_repair .how_do_we_repair_item{margin-bottom:90px}
+.how_do_we_repair .how_do_we_repair_item:nth-of-type(2n+1) .how_do_we_repair_item_img{margin:auto;float:none}
+.how_do_we_repair .how_do_we_repair_item_txt{margin:60px auto 0;float:none}
+.how_do_we_repair .how_do_we_repair_item_img{margin:auto;float:none}
+}
+@media only screen and (max-width:767px){.header_title h1,.header_title p,h2{padding-left:15px;padding-right:15px}
+.animated{-webkit-transition-property:none!important;transition-property:none!important;-ms-transform:none!important;-webkit-transform:none!important;transform:none!important;-webkit-animation:none!important;animation:none!important}
+.header_modal{margin-top:40px}
+[off-canvas*=left]{width:255px}
+nav[canvas]{top:50px;right:30px;-webkit-transition:.5s;transition:.5s}
+nav[canvas].fixed{top:12px}
+nav[canvas=header_top],nav[canvas=header_top].fixed{top:0}
 .header_title h1{margin:193px auto 10px;font-size:27px}
 .header_title p{margin-top:46px;font-size:14px;line-height:1.7}
 .header_title span{font-size:14px}
@@ -1618,12 +1640,23 @@ h2{font-size:24px}
 .what_customers_think .what_customers_think_item_txt p{max-height:64px}
 .map #map{position:static;width:100%;height:350px}
 .map .map_contacts{float:left;padding-left:30px}
+.buy h1,.buy p,.diagnostics h1,.diagnostics p,.why_wear_out_rail.repair_time p,.why_wear_out_rail.repair_time p+p{padding-left:15px;padding-right:15px}
 .footer .footer_copyright{display:block;float:none;margin-left:0}
 .footer .footer_copyright2{display:block;float:none}
 .footer .footer_copyright2 a{margin-right:10px}
 .footer a{left:0}
+.repair_if_necessary .repair_if_necessary_item{margin-bottom:70px}
+.diagnostics h1{font-size:27px}
+.diagnostics p{font-size:16px}
+.buy h1{font-size:27px}
+.buy p{font-size:16px}
+}
+@media only screen and (max-width:560px){.close{right:0}
 }
 @media only screen and (max-width:520px){.dm-modal,.dm-modal input[type=submit]{width:100%}
+.dm-modal h3{font-size:27px}
+.dm-modal p{font-size:16px}
+.dm-modal form{padding-left:15px;padding-right:15px}
 }
 @media only screen and (max-width:480px){.header_title h1{font-size:26px}
 .modal_form_input_wrap .modal_input_error{right:0}
