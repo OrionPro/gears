@@ -67,6 +67,7 @@ gulp.task('scripts', function() {
 		'app/libs/waypoints/waypoints.min.js',
 		'app/libs/GreenSock-JS/TweenMax.min.js',
 		'app/libs/GreenSock-JS/DrawSVGPlugin.min.js',
+		'app/libs/CustomScrollbar/jquery.custom-scroll.js',
 		'app/libs/animate/animate-css.js',
 		'app/libs/slidebars/slidebars.min.js',
 		'app/libs/animateNumber/jquery.animateNumber.min.js',

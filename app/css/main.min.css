@@ -1391,6 +1391,9 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .reliable_service h2{margin-top:111px;margin-bottom:13px}
 .reliable_service p{font-size:18px}
 .reliable_service .reliable_service_item{margin-top:63px;margin-bottom:55px}
+.reliable_service .reliable_service_item:nth-of-type(2){-webkit-animation-delay:.3s;animation-delay:.3s}
+.reliable_service .reliable_service_item:nth-of-type(3){-webkit-animation-delay:.6s;animation-delay:.6s}
+.reliable_service .reliable_service_item:nth-of-type(4){-webkit-animation-delay:.9s;animation-delay:.9s}
 .reliable_service .reliable_service_item p{margin-top:27px;font-size:20px;line-height:1.2;text-align:center}
 .reliable_service .reliable_service_item .reliable_service_item_img{text-align:center}
 .reliable_service .reliable_service_item .reliable_service_item_img i{font-size:72px;color:#00b6f4}
@@ -1401,6 +1404,9 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .intermediate .intermediate_title p{font-size:18px;color:#fff;text-align:center}
 .intermediate .intermediate_wrap{margin-top:40px}
 .intermediate .intermediate_wrap form{text-align:center;overflow:hidden;margin-top:65px}
+.intermediate .intermediate_wrap form div:nth-of-type(1){-webkit-animation-delay:.3s;animation-delay:.3s}
+.intermediate .intermediate_wrap form div:nth-of-type(2){-webkit-animation-delay:.6s;animation-delay:.6s}
+.intermediate .intermediate_wrap form div:nth-of-type(3){-webkit-animation-delay:.9s;animation-delay:.9s}
 .intermediate .intermediate_wrap .intermediate_item{display:inline-block;text-align:left;margin-bottom:40px}
 .intermediate .intermediate_wrap .intermediate_item input{width:263px;height:37px;border:none;border-bottom:1px solid #fff;background:0 0;color:#9a9a9a;margin-left:10px;padding:0 0 0 9px;font-size:18px}
 .intermediate .intermediate_wrap .intermediate_item input::-webkit-input-placeholder{color:#9a9a9a}
@@ -1408,7 +1414,7 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .intermediate .intermediate_wrap .intermediate_item input::-moz-placeholder{color:#9a9a9a}
 .intermediate .intermediate_wrap .intermediate_item input:-ms-input-placeholder{color:#9a9a9a}
 .intermediate .intermediate_wrap .intermediate_item input:active,.intermediate .intermediate_wrap .intermediate_item input:focus{outline:0}
-.intermediate .intermediate_wrap input[type=submit]{border:none;margin-top:7px;margin-left:15px}
+.intermediate .intermediate_wrap input[type=submit]{border:none;margin-top:7px;margin-left:15px;-webkit-animation-delay:1.2s;animation-delay:1.2s}
 .our_partners{min-height:450px;background-color:#fff}
 .our_partners .container{position:relative}
 .our_partners h2{margin-top:103px;margin-bottom:60px}
@@ -1424,6 +1430,9 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .hydropower_you_can{min-height:480px}
 .hydropower_you_can h2{margin-top:53px;margin-bottom:63px}
 .hydropower_you_can h2 span{text-transform:uppercase;color:#ee343b}
+.hydropower_you_can .hydropower_you_can_item:nth-of-type(1){-webkit-animation-delay:.3s;animation-delay:.3s}
+.hydropower_you_can .hydropower_you_can_item:nth-of-type(2){-webkit-animation-delay:.6s;animation-delay:.6s}
+.hydropower_you_can .hydropower_you_can_item:nth-of-type(3){-webkit-animation-delay:.9s;animation-delay:.9s}
 .hydropower_you_can .hydropower_you_can_item p{font-size:20px;margin-top:20px}
 .hydropower_you_can .hydropower_you_can_item a{margin-top:31px}
 .hydropower_you_can .hydropower_you_can_item .hydropower_you_can_item_img{height:90px;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;-ms-grid-row-align:flex-end;align-items:flex-end}
@@ -1432,7 +1441,7 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .what_customers_think .what_customers_think_item_wrap{margin-top:65px}
 .what_customers_think .what_customers_think_item_wrap_inner{overflow:hidden;padding-top:5px}
 .what_customers_think .what_customers_think_item_wrap_inner:last-of-type .what_customers_think_item:last-of-type{margin-bottom:130px}
-.what_customers_think .what_customers_think_item{margin-bottom:60px}
+.what_customers_think .what_customers_think_item{margin-bottom:60px;-webkit-animation-delay:.3s;animation-delay:.3s}
 .what_customers_think .what_customers_think_item:nth-of-type(2n+1) .what_customers_think_item_img{margin-left:15px}
 .what_customers_think .what_customers_think_item .what_customers_think_item_action a{display:none}
 .what_customers_think .what_customers_think_item.close_txt .what_customers_think_item_action .open_a,.what_customers_think .what_customers_think_item.open_txt .what_customers_think_item_action .close_a{display:inline-block}
@@ -1601,6 +1610,7 @@ nav[canvas=header_top].fixed .header_top{margin-top:25px}
 .how_do_we_repair .how_do_we_repair_item:nth-of-type(2n+1) .how_do_we_repair_item_img{margin:auto;float:none}
 .how_do_we_repair .how_do_we_repair_item_txt{margin:60px auto 0;float:none}
 .how_do_we_repair .how_do_we_repair_item_img{margin:auto;float:none}
+.close{right:-10px}
 }
 @media only screen and (max-width:767px){.header_title h1,.header_title p,h2{padding-left:15px;padding-right:15px}
 .animated{-webkit-transition-property:none!important;transition-property:none!important;-ms-transform:none!important;-webkit-transform:none!important;transform:none!important;-webkit-animation:none!important;animation:none!important}
@@ -1650,13 +1660,16 @@ h2{font-size:24px}
 .diagnostics p{font-size:16px}
 .buy h1{font-size:27px}
 .buy p{font-size:16px}
-}
-@media only screen and (max-width:560px){.close{right:0}
+.close{right:0}
 }
 @media only screen and (max-width:520px){.dm-modal,.dm-modal input[type=submit]{width:100%}
 .dm-modal h3{font-size:27px}
 .dm-modal p{font-size:16px}
 .dm-modal form{padding-left:15px;padding-right:15px}
+.popup.pop3 .dm-modal{max-width:30em}
+.popup.pop3 .dm-modal_inner_h1{font-size:27px}
+.popup.pop3 .dm-modal_inner_h2{font-size:23px}
+.popup.pop3 p{font-size:18px}
 }
 @media only screen and (max-width:480px){.header_title h1{font-size:26px}
 .modal_form_input_wrap .modal_input_error{right:0}

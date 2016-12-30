@@ -318,6 +318,8 @@
 		.how_do_we_repair_item_img
 			margin: auto
 			float: none
+	.close
+		right: -10px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
 	
@@ -512,11 +514,12 @@
 				& + p
 					padding-left: 15px
 					padding-right: 15px
+	.close
+		right: 0px	
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 560px)
 	/**/
-	.close
-		right: 0px	
+	
 @media only screen and (max-width : 520px)
 	/**/
 	
@@ -533,9 +536,16 @@
 	.dm-modal
 		input[type=submit]
 			width: 100%
-	.popup3
-		.dm-modal
-			
+	.popup
+		&.pop3
+			.dm-modal
+				max-width: 30em
+			.dm-modal_inner_h1
+				font-size: 27px
+			.dm-modal_inner_h2
+				font-size: 23px
+			p
+				font-size: 18px	
 @media only screen and (max-width : 480px)
 	/**/
 

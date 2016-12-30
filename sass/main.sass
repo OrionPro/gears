@@ -8,6 +8,7 @@
 @import "../app/libs/FontAwesome/font-awesome.min"
 @import "../app/libs/slidebars/slidebars.min"
 
+
 *::-webkit-input-placeholder
 	color: #9a9a9a
 	opacity: 1
@@ -78,7 +79,6 @@ nav[canvas=header_top]
 				font-size: 24px
 
 
-
 // Секция our_advantages
 .reliable_service
 	min-height: 580px
@@ -92,6 +92,13 @@ nav[canvas=header_top]
 	.reliable_service_item
 		margin-top: 63px
 		margin-bottom: 55px
+		&:nth-of-type(2)
+			animation-delay: 0.3s
+		&:nth-of-type(3)
+			animation-delay: 0.6s
+		&:nth-of-type(4)
+			animation-delay: 0.9s
+
 		p
 			margin-top: 27px
 			font-size: 20px
@@ -131,6 +138,13 @@ nav[canvas=header_top]
 			text-align: center
 			overflow: hidden
 			margin-top: 65px
+			div
+				&:nth-of-type(1)
+					animation-delay: 0.3s
+				&:nth-of-type(2)
+					animation-delay: 0.6s
+				&:nth-of-type(3)
+					animation-delay: 0.9s
 		.intermediate_item
 			display: inline-block
 			text-align: left
@@ -163,6 +177,7 @@ nav[canvas=header_top]
 			border: none
 			margin-top: 7px
 			margin-left: 15px
+			animation-delay: 1.2s
 			&:hover
 				@extend %main_btn_hover	
 			&:active
@@ -231,6 +246,12 @@ nav[canvas=header_top]
 			text-transform: uppercase
 			color: $main_color	
 	.hydropower_you_can_item
+		&:nth-of-type(1)
+			animation-delay: 0.3s
+		&:nth-of-type(2)
+			animation-delay: 0.6s
+		&:nth-of-type(3)
+			animation-delay: 0.9s
 		p
 			font-size: 20px
 			margin-top: 20px	
@@ -271,10 +292,10 @@ nav[canvas=header_top]
 					margin-bottom: 130px
 	.what_customers_think_item
 		margin-bottom: 60px
+		animation-delay: 0.3s
 		&:nth-of-type(2n+1)
 			.what_customers_think_item_img
-				margin-left: 15px		
-			
+				margin-left: 15px	
 		.what_customers_think_item_action
 			a
 				display: none

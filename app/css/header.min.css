@@ -1,6 +1,5 @@
 .dm-modal .select .drop li a,.dm-modal .select .slct,.header_btn a+a:active,.header_btn a+a:hover,.header_btn a:active,.header_btn a:focus,.header_btn a:hover,.header_logo a:hover,.header_nav ul li a{text-decoration:none}
 .dm-modal input[type=submit],.header_btn a{width:263px;height:54px;padding-left:10px;padding-right:10px;display:inline-block;background-color:#EE343B;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 2px 1px rgba(0,0,0,.35);box-shadow:0 2px 1px rgba(0,0,0,.35);color:#fff;font:18px Lato-Light,Arial,sans-serif;line-height:54px;-webkit-transition:.5s;transition:.5s}
-.popup.pop3 .dm-modal ul,p{padding:0}
 .dm-modal input[type=submit]:active,.dm-modal input[type=submit]:hover,.header_btn a:active,.header_btn a:hover{text-decoration:none;background-color:#ec1d25}
 .dm-modal input[type=submit]:focus,.header_btn a:focus{background-color:#ec1d25;outline:0}
 .header_btn a+a{width:263px;height:54px;display:inline-block;background-color:transparent;-webkit-border-radius:5px;border-radius:5px;border:1px solid #FDFDFD;color:#fff;font:18px Lato-Light,Arial,sans-serif;line-height:54px;-webkit-transition:.5s;transition:.5s}
@@ -13,21 +12,23 @@ body,h2{color:#2f3443}
 @font-face{font-family:Lato-Light;font-style:normal;font-weight:400;src:url(../fonts/Lato-Light/Lato-Light.eot?#iefix) format("embedded-opentype"),url(../fonts/Lato-Light/Lato-Light.woff) format("woff"),url(../fonts/Lato-Light/Lato-Light.ttf) format("truetype")}
 body.slidebars,html.slidebars{width:100%;overflow:hidden!important}
 body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-family:Lato-Light,Arial,sans-serif;overflow-x:hidden}
+.overlay,.popup,.popup2{position:fixed;top:0;left:0}
 h1{color:#fff;font:72px Lato-Light,Arial,sans-serif}
 h2{font-family:Lato-Bold,Arial,sans-serif;font-size:36px;text-align:center}
-p{margin:0}
+p{padding:0;margin:0}
 .hidden{display:none}
-.popup,.popup2{width:100%;height:100%;background:rgba(34,36,44,.95);position:fixed;top:0;left:0;display:none;overflow:auto;z-index:1000}
-.popup.pop3 .dm-modal{margin-top:50px;width:inherit;padding:0;border:none;background-color:transparent}
+.popup,.popup2{width:100%;height:100%;background:rgba(34,36,44,.95);display:none;overflow:auto;z-index:1000}
+.popup.pop3 .dm-modal{margin-top:50px;width:inherit;border:none;background-color:transparent}
 .dm-table,.overlay{width:100%;height:100%}
+.popup.pop3 .dm-modal ul{padding:0}
 .popup.pop3 .dm-modal li{list-style:none}
 .popup.pop3 .dm-modal li a{font-size:30px;color:#fff}
-.popup.pop3 .close{top:15px}
+.popup.pop3 .close{top:0}
 .popup.pop3 .dm-modal_inner_h1{font:40px Lato-Bold,Arial,sans-serif;color:#ee343b;margin-bottom:30px;text-align:center}
 .popup.pop3 .dm-modal_inner_h2{font:30px Lato-Bold,Arial,sans-serif;color:#ee343b;text-align:left;margin-top:10px;margin-bottom:10px}
-.popup.pop3 p{font:20px;color:#fff;text-align:left}
+.popup.pop3 p{font-size:20px;color:#fff;text-align:left}
 .dm-table{display:table}
-.overlay{position:fixed;top:0;left:0;z-index:1001}
+.overlay{z-index:1001}
 .dm-cell{display:table-cell;padding:0 1em;vertical-align:middle;text-align:center}
 .dm-modal{width:360px;max-width:50em;display:inline-block;padding:10px 0 50px;text-align:center;position:relative;-webkit-animation:fade .8s;animation:fade .8s;background-color:transparent;z-index:1002}
 .dm-modal form{padding-left:50px;padding-right:50px}

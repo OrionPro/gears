@@ -32,17 +32,29 @@ $(window).scroll(function() {
         limit++;
 
     }
-    if ($(window).scrollTop() >= 100) {
-        tl2.resume();
-        tl3.resume();
+    if (window.matchMedia("(min-width: 992px)").matches) {
 
+        if ($(window).scrollTop() >= 100) {
+            tl2.resume();
+            tl3.resume();
+
+
+        }
+        if ($(window).scrollTop() >= 100) {
+
+
+        }
 
     }
-    if ($(window).scrollTop() >= 100) {
 
+    var wScroll = $(this).scrollTop();
 
-    }
-
+    $('.header_title_img').css({
+        'transform': 'translate(0px, ' + wScroll / 45 + '%)'
+    });
+    $('.header_btn, .header_title h1, .header_title p').css({
+        'transform': 'translate(0px, ' + '-' + wScroll / 20 + '%)'
+    });
 
     if ($(window).scrollTop() > 0) {
         $('nav[canvas=header_top]').addClass('fixed');
@@ -140,6 +152,23 @@ var tl2 = new TimelineMax(); // анимация header
 var tl3 = new TimelineMax(); // анимация header
 
 $(document).ready(function() {
+    // анимации - animate.css
+    $(".reliable_service h2").animated("fadeInUp");
+    $(".reliable_service p").animated("fadeInUp");
+    $(".intermediate .intermediate_title h2").animated("fadeInUp");
+    $(".intermediate .intermediate_title p").animated("fadeInUp");
+    $(".intermediate form div").animated("fadeInUp");
+    $(".intermediate_wrap input[type=submit]").animated("fadeInUp");
+    $(".reliable_service .reliable_service_item").animated("fadeInUp");
+    $(".our_partners h2").animated("fadeInUp");
+    $(".our_partners .our_partners_slider, .hydropower_you_can h2, .hydropower_you_can_item").animated("fadeInUp");
+    $(".map .map_contacts h2, .what_customers_think h2, .what_customers_think .what_customers_think_item").animated("fadeInUp");
+    $(".map .map_contacts_item").animated("fadeInUp");
+
+
+    // Скролл меняем на всех страницах
+    
+
     // убираем br из параграфов
     if (window.matchMedia("(max-width: 768px)").matches) {
         $(".why_wear_out_rail .why_wear_out_rail_item p br").remove();
@@ -185,6 +214,8 @@ $(document).ready(function() {
 
     if ($(window).scrollTop() >= 100) {
         tl1.resume();
+        tl3.resume();
+        
         // активация тайм линий при загрузке с измерением скролла
 
         if (limit == 0) {
@@ -197,9 +228,9 @@ $(document).ready(function() {
 
     }
 
-    tl1.from(".path4136", 2, {  drawSVG: "0%" }, 0.4).
-        from(".header_item_circle_img", 2, { autoAlpha: 0}, 0);
-    
+    tl1.from(".path4136", 2, { drawSVG: "0%" }, 0.4).
+    from(".header_item_circle_img", 2, { autoAlpha: 0 }, 0);
+
 
     function readyTimeLineGo() {
 
@@ -209,10 +240,10 @@ $(document).ready(function() {
 
         readyTimeLineGo();
         // Анимация, которая будет работать от 992px
-        tl2.to(".header_title_img", 2, { y: 20 });
+
 
         tl3.from(".header_item_circle span", 2, { autoAlpha: 0, y: 20 });
-        
+
 
 
     }
@@ -227,14 +258,22 @@ $(document).ready(function() {
     //   track: true
     // });  
     // скролл по ссылке с атрибутом href 
-    // $(".header_nav a[href*='#']").on("click", function(e) {
-    //     e.preventDefault();
-    //     var anchor = $(this);
-    //     $('html, body').stop().animate({
-    //         scrollTop: $(anchor.attr('href')).offset().top
-    //     }, 500);
-    //     return false;
-    // });
+    $(".header_nav a[href*='#']").on("click", function(e) {
+        e.preventDefault();
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 500);
+        return false;
+    });
+    $(".header_nav_mobile a[href*='#']").on("click", function(e) {
+        e.preventDefault();
+        var anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(anchor.attr('href')).offset().top
+        }, 500);
+        return false;
+    });
     // Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
     // $(".scroll_to").on("click", function(e) {
     //     e.preventDefault();
