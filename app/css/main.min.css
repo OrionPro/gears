@@ -1,5 +1,5 @@
 .owl-carousel,.owl-carousel .owl-item{-webkit-tap-highlight-color:transparent;position:relative}
-.buy a,.hydropower_you_can .hydropower_you_can_item a,.intermediate .intermediate_wrap input[type=submit]{width:263px;height:54px;padding-left:10px;padding-right:10px;display:inline-block;background-color:#EE343B;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 2px 1px rgba(0,0,0,.35);box-shadow:0 2px 1px rgba(0,0,0,.35);color:#fff;font:18px Lato-Light,Arial,sans-serif;line-height:54px;-webkit-transition:.5s;transition:.5s}
+.buy a,.hydropower_you_can .hydropower_you_can_item a,.intermediate .intermediate_wrap input[type=submit]{width:263px;height:54px;padding-left:10px;padding-right:10px;display:inline-block;background-color:#EE343B;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 2px 1px rgba(0,0,0,.35);box-shadow:0 2px 1px rgba(0,0,0,.35);color:#fff;font:18px Lato-Light,Arial,sans-serif;line-height:54px;-webkit-transition:background-color .5s;transition:background-color .5s}
 .buy a:active,.buy a:hover,.hydropower_you_can .hydropower_you_can_item a:active,.hydropower_you_can .hydropower_you_can_item a:hover,.intermediate .intermediate_wrap input[type=submit]:active,.intermediate .intermediate_wrap input[type=submit]:hover{text-decoration:none;background-color:#ec1d25}
 .buy a:focus,.hydropower_you_can .hydropower_you_can_item a:focus,.intermediate .intermediate_wrap input[type=submit]:focus{background-color:#ec1d25;outline:0}
 .hydropower_you_can .hydropower_you_can_item .hydropower_you_can_item_img,.our_partners .owl-item,.repair_if_necessary .repair_if_necessary_item .repair_if_necessary_item_img{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
@@ -1440,7 +1440,7 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .what_customers_think h2 span{color:#ee343b}
 .what_customers_think .what_customers_think_item_wrap{margin-top:65px}
 .what_customers_think .what_customers_think_item_wrap_inner{overflow:hidden;padding-top:5px}
-.what_customers_think .what_customers_think_item_wrap_inner:last-of-type .what_customers_think_item:last-of-type{margin-bottom:130px}
+.what_customers_think .what_customers_think_item_wrap_inner:last-of-type .what_customers_think_item:last-of-type{margin-bottom:200px}
 .what_customers_think .what_customers_think_item{margin-bottom:60px;-webkit-animation-delay:.3s;animation-delay:.3s}
 .what_customers_think .what_customers_think_item:nth-of-type(2n+1) .what_customers_think_item_img{margin-left:15px}
 .what_customers_think .what_customers_think_item .what_customers_think_item_action a{display:none}
@@ -1476,11 +1476,18 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .diagnostics form{margin-top:60px}
 .why_wear_out_rail h2{margin-top:128px;margin-bottom:60px}
 .why_wear_out_rail .why_wear_out_rail_item{margin-bottom:30px;height:358px;overflow:hidden}
+.why_wear_out_rail .why_wear_out_rail_item:nth-of-type(2){-webkit-animation-delay:.3s;animation-delay:.3s}
+.why_wear_out_rail .why_wear_out_rail_item:nth-of-type(3){-webkit-animation-delay:.6s;animation-delay:.6s}
+.why_wear_out_rail .why_wear_out_rail_item:nth-of-type(4){-webkit-animation-delay:.9s;animation-delay:.9s}
 .why_wear_out_rail .why_wear_out_rail_item h3{font-size:21px;margin-bottom:6px;font-family:Lato-Bold,Arial,sans-serif}
 .why_wear_out_rail .why_wear_out_rail_item p{font-size:16px;line-height:1.2}
 .repair_if_necessary{text-align:center;min-height:510px}
 .repair_if_necessary h2{margin-top:92px;margin-bottom:60px}
 .repair_if_necessary .repair_if_necessary_item{margin-bottom:20px}
+.repair_if_necessary .repair_if_necessary_item:nth-of-type(2){-webkit-animation-delay:.2s;animation-delay:.2s}
+.repair_if_necessary .repair_if_necessary_item:nth-of-type(3){-webkit-animation-delay:.4s;animation-delay:.4s}
+.repair_if_necessary .repair_if_necessary_item:nth-of-type(4){-webkit-animation-delay:.6s;animation-delay:.6s}
+.repair_if_necessary .repair_if_necessary_item:nth-of-type(5){-webkit-animation-delay:.8s;animation-delay:.8s}
 .repair_if_necessary .repair_if_necessary_item .repair_if_necessary_item_img{height:100px}
 .repair_if_necessary .repair_if_necessary_item h3{margin-bottom:12px;margin-top:20px;color:#000;font:24px Lato-Bold,Arial,sans-serif;line-height:1.2}
 .repair_if_necessary .repair_if_necessary_item p{font-size:18px;line-height:1.2}
@@ -1498,18 +1505,21 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .why_wear_out_rail.repair_time p{max-width:813px;margin:0 auto 40px;font-size:18px}
 .why_wear_out_rail.repair_time p+p{max-width:100%;font-size:22px;margin-bottom:30px;color:#ee343b}
 .why_wear_out_rail.repair_time .why_wear_out_rail_item{height:305px}
+.why_wear_out_rail.repair_time .why_wear_out_rail_item:nth-of-type(2){-webkit-animation-delay:.2s;animation-delay:.2s}
+.why_wear_out_rail.repair_time .why_wear_out_rail_item:nth-of-type(3){-webkit-animation-delay:.4s;animation-delay:.4s}
+.why_wear_out_rail.repair_time .why_wear_out_rail_item:nth-of-type(4){-webkit-animation-delay:.6s;animation-delay:.6s}
 .why_wear_out_rail.repair_time .why_wear_out_rail_item:last-of-type{margin-bottom:90px}
 .buy{min-height:730px;background:url(../img/buy_bg.jpg) center top no-repeat fixed}
 .buy h1{font-size:48px;margin-top:246px;margin-bottom:40px}
 .buy p{font-size:17px;color:#fff}
 .footer .footer_copyright2 span,.footer a{font-size:14px;color:#fff}
-.buy a{margin-top:131px;display:inline-block}
+.buy a{margin-top:120px;display:inline-block}
 .footer{background-color:#1b1e27;min-height:60px}
 .footer .footer_copyright{float:left;margin-left:30px;margin-top:18px}
 .footer .footer_copyright p{font-size:14px;text-transform:uppercase;color:#fff}
 .footer a{margin-top:18px;display:inline-block;position:relative;left:21px}
 .footer .footer_copyright2{float:right}
-.footer .footer_copyright2 a{margin-right:37px;margin-top:13px;left:0}
+.footer .footer_copyright2 a{margin-right:37px;margin-top:17px;left:0}
 .footer .footer_copyright2 img{position:relative;left:5px}
 @media only screen and (max-width:1200px){.header_modal{margin-top:20px}
 .intermediate .intermediate_wrap{margin-bottom:20px}

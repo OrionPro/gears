@@ -20,6 +20,7 @@ $(window).resize(function() {
 var limit = 0;
 $(window).scroll(function() {
     // анимация чисел на главной странице
+    tl3.resume();
     if ($(window).scrollTop() >= 100) {
         tl1.resume();
 
@@ -34,9 +35,8 @@ $(window).scroll(function() {
     }
     if (window.matchMedia("(min-width: 992px)").matches) {
 
+        tl2.resume();
         if ($(window).scrollTop() >= 100) {
-            tl2.resume();
-            tl3.resume();
 
 
         }
@@ -155,19 +155,19 @@ $(document).ready(function() {
     // анимации - animate.css
     $(".reliable_service h2").animated("fadeInUp");
     $(".reliable_service p").animated("fadeInUp");
-    $(".intermediate .intermediate_title h2").animated("fadeInUp");
+    $(".intermediate .intermediate_title h2, .why_wear_out_rail h2, .why_wear_out_rail .why_wear_out_rail_item").animated("fadeInUp");
     $(".intermediate .intermediate_title p").animated("fadeInUp");
-    $(".intermediate form div").animated("fadeInUp");
-    $(".intermediate_wrap input[type=submit]").animated("fadeInUp");
+    $(".intermediate form div, .how_do_we_repair h2, .how_do_we_repair .how_do_we_repair_item").animated("fadeInUp");
+    $(".intermediate_wrap input[type=submit], .why_wear_out_rail.repair_time .why_wear_out_rail_item").animated("fadeInUp");
     $(".reliable_service .reliable_service_item").animated("fadeInUp");
-    $(".our_partners h2").animated("fadeInUp");
+    $(".our_partners h2, .why_wear_out_rail.repair_time h2, .why_wear_out_rail.repair_time p, .why_wear_out_rail.repair_time p+p").animated("fadeInUp");
     $(".our_partners .our_partners_slider, .hydropower_you_can h2, .hydropower_you_can_item").animated("fadeInUp");
     $(".map .map_contacts h2, .what_customers_think h2, .what_customers_think .what_customers_think_item").animated("fadeInUp");
-    $(".map .map_contacts_item").animated("fadeInUp");
+    $(".map .map_contacts_item, .repair_if_necessary h2, .repair_if_necessary .repair_if_necessary_item ").animated("fadeInUp");
 
 
     // Скролл меняем на всех страницах
-    
+
 
     // убираем br из параграфов
     if (window.matchMedia("(max-width: 768px)").matches) {
@@ -215,7 +215,7 @@ $(document).ready(function() {
     if ($(window).scrollTop() >= 100) {
         tl1.resume();
         tl3.resume();
-        
+
         // активация тайм линий при загрузке с измерением скролла
 
         if (limit == 0) {
@@ -230,6 +230,7 @@ $(document).ready(function() {
 
     tl1.from(".path4136", 2, { drawSVG: "0%" }, 0.4).
     from(".header_item_circle_img", 2, { autoAlpha: 0 }, 0);
+    tl3.from(".header_item_circle span", 2, { autoAlpha: 0, y: 20 });
 
 
     function readyTimeLineGo() {
@@ -242,7 +243,19 @@ $(document).ready(function() {
         // Анимация, которая будет работать от 992px
 
 
-        tl3.from(".header_item_circle span", 2, { autoAlpha: 0, y: 20 });
+        tl2.from(".header_top", 1, { autoAlpha: 0, y: 40 }, 0.7).
+            from(".header_title h1", 1, { autoAlpha: 0, y: 40 }, 0.9).
+            from(".header_title p", 1, { autoAlpha: 0, y: 40 }, 1).
+            from(".diagnostics h1", 1, { autoAlpha: 0, y: 40 }, 1).
+            from(".buy h1", 1, { autoAlpha: 0, y: 40 }, 1).
+            from(".diagnostics p", 1, { autoAlpha: 0, y: 40 }, 1.2).
+            from(".buy p", 1, { autoAlpha: 0, y: 40 }, 1.2).
+            from(".diagnostics h2", 1, { autoAlpha: 0, y: 40 }, 1.4).
+            from(".buy a", 1, { autoAlpha: 0, y: 40 }, 1.4).
+            from(".header_btn", 1, { autoAlpha: 0, y: 40 }, 1.2).
+            from(".header_title_img", 1, { autoAlpha: 0, x: 80 }, 1.4)
+        ;
+        tl2.resume();
 
 
 
