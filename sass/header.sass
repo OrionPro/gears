@@ -17,6 +17,17 @@ body
 	overflow-x: hidden
 	color: $main_txt_color
 	-webkit-tap-highlight-color:transparent
+	scrollbar-base-color: $main_color
+	scrollbar-arrow-color: $main_color
+	&::-webkit-scrollbar
+		width: 12px
+	&::-webkit-scrollbar-thumb
+		background-color: $main_color
+		&:hover
+			background-color: darken($main_color, 10%)
+	&::-webkit-scrollbar-track-piece
+		background-color: transparent
+
 	// background: url('../main 1920px копия.jpg') center top no-repeat
 	//background: url('../main 970px копия.jpg') center top no-repeat
 	// background: url('../main 750.jpg') center top no-repeat

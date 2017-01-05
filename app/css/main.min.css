@@ -1459,7 +1459,7 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .map #map{height:100%;width:54.5%;position:absolute;top:0;left:0;z-index:10}
 .map .map_contacts{width:414px;margin-top:90px;float:right}
 .map .map_contacts h2{margin-top:20px;margin-bottom:56px;text-align:left}
-.buy,.diagnostics,.footer,.why_wear_out_rail{text-align:center}
+.buy,.diagnostics,.footer,.repair_if_necessary,.why_wear_out_rail{text-align:center}
 .map .map_contacts_item{margin-bottom:30px}
 .map .map_contacts_item:first-of-type i{margin-right:14px}
 .map .map_contacts_item:nth-of-type(2) i,.map .map_contacts_item:nth-of-type(3) i{margin-right:10px}
@@ -1481,7 +1481,7 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .why_wear_out_rail .why_wear_out_rail_item:nth-of-type(4){-webkit-animation-delay:.9s;animation-delay:.9s}
 .why_wear_out_rail .why_wear_out_rail_item h3{font-size:21px;margin-bottom:6px;font-family:Lato-Bold,Arial,sans-serif}
 .why_wear_out_rail .why_wear_out_rail_item p{font-size:16px;line-height:1.2}
-.repair_if_necessary{text-align:center;min-height:510px}
+.repair_if_necessary{min-height:510px}
 .repair_if_necessary h2{margin-top:92px;margin-bottom:60px}
 .repair_if_necessary .repair_if_necessary_item{margin-bottom:20px}
 .repair_if_necessary .repair_if_necessary_item:nth-of-type(2){-webkit-animation-delay:.2s;animation-delay:.2s}
@@ -1512,8 +1512,30 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .buy{min-height:730px;background:url(../img/buy_bg.jpg) center top no-repeat fixed}
 .buy h1{font-size:48px;margin-top:246px;margin-bottom:40px}
 .buy p{font-size:17px;color:#fff}
-.footer .footer_copyright2 span,.footer a{font-size:14px;color:#fff}
 .buy a{margin-top:120px;display:inline-block}
+.tips_and_articles{background-color:#fff}
+.tips_and_articles h2{margin-top:200px;margin-bottom:50px;-webkit-animation-delay:.5s;animation-delay:.5s}
+.tips_and_articles .tips_and_articles_item{margin-bottom:50px;-webkit-animation-delay:.7s;animation-delay:.7s}
+.tips_and_articles .tips_and_articles_item h3{margin-top:-5px;margin-bottom:12px;font-size:24px;color:#2f3443;font-family:Lato-Bold,Arial,sans-serif}
+.tips_and_articles .tips_and_articles_item_img{float:left;margin-right:50px}
+.tips_and_articles .tips_and_articles_item_txt{width:650px;float:left}
+.tips_and_articles .tips_and_articles_item_txt p{height:168px;overflow:hidden;font-size:18px;line-height:1.2}
+.tips_and_articles .tips_and_articles_item_link{margin-top:8px}
+.tips_and_articles .tips_and_articles_item_link a{-webkit-transition:.5s;transition:.5s}
+.tips_and_articles .tips_and_articles_item_link a:hover{color:#ee343b}
+.tips_and_articles .tips_and_articles_pagination{margin-bottom:130px;text-align:center;overflow:hidden}
+.tips_and_articles .tips_and_articles_pagination a{width:34px;height:34px;margin-right:5px;-webkit-border-radius:50%;border-radius:50%;background-color:#2f3443;display:inline-block;vertical-align:middle;font-size:18px;line-height:34px;color:#fff;-webkit-transition:.5s;transition:.5s}
+.footer .footer_copyright2 span,.footer a{font-size:14px;color:#fff}
+.tips_and_articles .tips_and_articles_pagination a:nth-last-child(1),.tips_and_articles .tips_and_articles_pagination a:nth-last-child(2){margin-right:0}
+.tips_and_articles .tips_and_articles_pagination a:hover{text-decoration:none;background-color:#ee343b}
+.tips_and_articles .tips_and_articles_pagination .active{background-color:#ee343b}
+.tips_and_articles .tips_and_articles_pagination .tips_and_articles_pagination_arrow{width:27px;height:35px;-webkit-border-radius:inherit;border-radius:inherit;background-color:transparent}
+.tips_and_articles .tips_and_articles_pagination .arrow_left{background:url(../img/tips_and_articles_pagination_arrow_left.png) center center no-repeat;margin-right:20px}
+.tips_and_articles .tips_and_articles_pagination .arrow_left:hover{background:url(../img/tips_and_articles_pagination_arrow_left_hover.png) center center no-repeat}
+.tips_and_articles .tips_and_articles_pagination .arrow_right{background:url(../img/tips_and_articles_pagination_arrow_right.png) 0 2px no-repeat;margin-left:20px}
+.tips_and_articles .tips_and_articles_pagination .arrow_right:hover{background:url(../img/tips_and_articles_pagination_arrow_right_hover.png) 0 2px no-repeat}
+nav[canvas=header_top].header_tips_and_articles{background-color:#000}
+nav[canvas=header_top].fixed.header_tips_and_articles{background-color:rgba(0,0,0,.5)}
 .footer{background-color:#1b1e27;min-height:60px}
 .footer .footer_copyright{float:left;margin-left:30px;margin-top:18px}
 .footer .footer_copyright p{font-size:14px;text-transform:uppercase;color:#fff}
@@ -1521,10 +1543,11 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .footer .footer_copyright2{float:right}
 .footer .footer_copyright2 a{margin-right:37px;margin-top:17px;left:0}
 .footer .footer_copyright2 img{position:relative;left:5px}
-@media only screen and (max-width:1200px){.header_modal{margin-top:20px}
+@media only screen and (max-width:1200px){.tips_and_articles .tips_and_articles_item,.why_wear_out_rail .why_wear_out_rail_item{text-align:center}
+.header_modal{margin-top:20px}
 .intermediate .intermediate_wrap{margin-bottom:20px}
 .intermediate .intermediate_wrap .intermediate_item{display:block;margin:30px auto}
-.intermediate .intermediate_wrap .modal_form_input_wrap{display:inline-block}
+.intermediate .intermediate_wrap .modal_form_input_wrap,.tips_and_articles .tips_and_articles_item_img img{display:inline-block}
 .header_logo{margin-top:50px;margin-left:20px}
 .header_nav{margin-top:64px}
 .header_nav ul li:last-of-type a{margin-right:13px}
@@ -1560,7 +1583,6 @@ label.intermediate_item_label{margin-left:24px}
 .map .map_contacts_item p{font-size:17px}
 .map #map{width:58%}
 .map .map_contacts{width:336px;margin-top:105px}
-.why_wear_out_rail .why_wear_out_rail_item{text-align:center}
 .why_wear_out_rail .why_wear_out_rail_item h3{font-size:19px;line-height:1.2;margin-top:30px;margin-bottom:10px}
 .why_wear_out_rail .why_wear_out_rail_item p{font-size:14px}
 .why_wear_out_rail .why_wear_out_rail_item .why_wear_out_rail_item_img img{margin:auto}
@@ -1570,6 +1592,8 @@ label.intermediate_item_label{margin-left:24px}
 .how_do_we_repair .how_do_we_repair_item_img{width:220px}
 .how_do_we_repair .how_do_we_repair_item_txt{width:190px}
 .how_do_we_repair .how_do_we_repair_item_txt h3{font-size:18px}
+.tips_and_articles .tips_and_articles_item_img{margin-bottom:30px;margin-right:0;float:none;text-align:center}
+.tips_and_articles .tips_and_articles_item_txt{width:100%;float:none}
 }
 @media only screen and (max-width:992px){.header_nav{display:none}
 .header_logo,.intermediate .intermediate_wrap .modal_form_input_wrap,nav[canvas]{display:block}
@@ -1671,6 +1695,9 @@ h2{font-size:24px}
 .buy h1{font-size:27px}
 .buy p{font-size:16px}
 .close{right:0}
+.tips_and_articles .tips_and_articles_item_img{margin-bottom:20px}
+.tips_and_articles .tips_and_articles_item_txt h3{font-size:18px}
+.tips_and_articles .tips_and_articles_item_txt p{font-size:16px;height:115px}
 }
 @media only screen and (max-width:520px){.dm-modal,.dm-modal input[type=submit]{width:100%}
 .dm-modal h3{font-size:27px}

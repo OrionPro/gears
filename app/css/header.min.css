@@ -11,8 +11,12 @@ body,h2{color:#2f3443}
 @font-face{font-family:Lato-Bold;font-style:normal;font-weight:400;src:url(../fonts/Lato-Bold/Lato-Bold.eot?#iefix) format("embedded-opentype"),url(../fonts/Lato-Bold/Lato-Bold.woff) format("woff"),url(../fonts/Lato-Bold/Lato-Bold.ttf) format("truetype")}
 @font-face{font-family:Lato-Light;font-style:normal;font-weight:400;src:url(../fonts/Lato-Light/Lato-Light.eot?#iefix) format("embedded-opentype"),url(../fonts/Lato-Light/Lato-Light.woff) format("woff"),url(../fonts/Lato-Light/Lato-Light.ttf) format("truetype")}
 body.slidebars,html.slidebars{width:100%;overflow:hidden!important}
-body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-family:Lato-Light,Arial,sans-serif;overflow-x:hidden}
+body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-family:Lato-Light,Arial,sans-serif;overflow-x:hidden;scrollbar-base-color:#ee343b;scrollbar-arrow-color:#ee343b}
 .overlay,.popup,.popup2{position:fixed;top:0;left:0}
+body::-webkit-scrollbar{width:12px}
+body::-webkit-scrollbar-thumb{background-color:#ee343b}
+body::-webkit-scrollbar-thumb:hover{background-color:#dd121a}
+body::-webkit-scrollbar-track-piece{background-color:transparent}
 h1{color:#fff;font:72px Lato-Light,Arial,sans-serif}
 h2{font-family:Lato-Bold,Arial,sans-serif;font-size:36px;text-align:center}
 p{padding:0;margin:0}

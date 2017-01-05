@@ -154,7 +154,7 @@ var tl3 = new TimelineMax(); // анимация header
 $(document).ready(function() {
     // анимации - animate.css
     $(".reliable_service h2").animated("fadeInUp");
-    $(".reliable_service p").animated("fadeInUp");
+    $(".reliable_service p, .tips_and_articles h2, .tips_and_articles .tips_and_articles_item").animated("fadeInUp");
     $(".intermediate .intermediate_title h2, .why_wear_out_rail h2, .why_wear_out_rail .why_wear_out_rail_item").animated("fadeInUp");
     $(".intermediate .intermediate_title p").animated("fadeInUp");
     $(".intermediate form div, .how_do_we_repair h2, .how_do_we_repair .how_do_we_repair_item").animated("fadeInUp");

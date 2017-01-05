@@ -564,7 +564,89 @@ nav[canvas=header_top]
 			@extend %main_btn_active
 		&:focus
 			@extend %main_btn_focus
-//	Секция
+//	Секция tips_and_articles
+.tips_and_articles
+	background-color: #fff 
+	h2
+		margin-top: 200px
+		margin-bottom: 50px
+		animation-delay: 0.5s
+	.tips_and_articles_item_wrap
+	.tips_and_articles_item
+		margin-bottom: 50px
+		animation-delay: 0.7s
+		h3
+			margin-top: -5px
+			margin-bottom: 12px
+			font-size: 24px
+			color: $main_txt_color
+			font-family: $font_Lato_Bold
+	.tips_and_articles_item_img
+		float: left
+		margin-right: 50px
+	.tips_and_articles_item_txt
+		width: 650px
+		float: left
+		p
+			height: 168px
+			overflow: hidden
+			font-size: 18px	
+			line-height: 1.2
+	.tips_and_articles_item_link
+		margin-top: 8px
+		a	
+			transition: 0.5s
+			&:hover
+				color: $main_color
+	.tips_and_articles_pagination
+		margin-bottom: 130px
+		text-align: center
+		overflow: hidden
+		a
+			width: 34px
+			height: 34px
+			margin-right: 5px
+			border-radius: 50%
+			background-color: $main_txt_color
+			display: inline-block
+			vertical-align: middle
+			font-size: 18px
+			line-height: 34px
+			color: #fff
+			transition: 0.5s
+			&:nth-last-child(2)
+				margin-right: 0
+			&:nth-last-child(1)
+				margin-right: 0
+			&:hover
+				text-decoration: none
+				background-color: $main_color
+		.active
+			background-color: $main_color
+		.tips_and_articles_pagination_arrow
+			width: 27px
+			height: 35px
+			border-radius: inherit
+			background-color: transparent
+		.arrow_left			
+			background: url('../img/tips_and_articles_pagination_arrow_left.png') center center no-repeat
+			margin-right: 20px
+			&:hover
+				background-color: transparent
+				background: url('../img/tips_and_articles_pagination_arrow_left_hover.png') center center no-repeat
+		.arrow_right
+			background: url('../img/tips_and_articles_pagination_arrow_right.png') 0 2px no-repeat
+			margin-left: 20px
+			&:hover
+				background-color: transparent
+				background: url('../img/tips_and_articles_pagination_arrow_right_hover.png') 0px 2px no-repeat
+nav[canvas=header_top]
+	&.header_tips_and_articles
+		background-color: #000
+nav[canvas=header_top].fixed
+	&.header_tips_and_articles
+		background-color: rgba(0,0,0,.5)
+
 //	Секция
 //	Секция
 //	Секция
