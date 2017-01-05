@@ -1515,6 +1515,7 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .buy a{margin-top:120px;display:inline-block}
 .tips_and_articles{background-color:#fff}
 .tips_and_articles h2{margin-top:200px;margin-bottom:50px;-webkit-animation-delay:.5s;animation-delay:.5s}
+.tips_and_articles .tips_and_articles_item_wrap{overflow:hidden;margin-bottom:20px}
 .tips_and_articles .tips_and_articles_item{margin-bottom:50px;-webkit-animation-delay:.7s;animation-delay:.7s}
 .tips_and_articles .tips_and_articles_item h3{margin-top:-5px;margin-bottom:12px;font-size:24px;color:#2f3443;font-family:Lato-Bold,Arial,sans-serif}
 .tips_and_articles .tips_and_articles_item_img{float:left;margin-right:50px}
