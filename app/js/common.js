@@ -153,18 +153,19 @@ var tl3 = new TimelineMax(); // анимация header
 
 $(document).ready(function() {
     // анимации - animate.css
-    $(".reliable_service h2").animated("fadeInUp");
-    $(".reliable_service p, .tips_and_articles h2, .tips_and_articles .tips_and_articles_item").animated("fadeInUp");
-    $(".intermediate .intermediate_title h2, .why_wear_out_rail h2, .why_wear_out_rail .why_wear_out_rail_item").animated("fadeInUp");
-    $(".intermediate .intermediate_title p").animated("fadeInUp");
-    $(".intermediate form div, .how_do_we_repair h2, .how_do_we_repair .how_do_we_repair_item").animated("fadeInUp");
-    $(".intermediate_wrap input[type=submit], .why_wear_out_rail.repair_time .why_wear_out_rail_item").animated("fadeInUp");
-    $(".reliable_service .reliable_service_item").animated("fadeInUp");
-    $(".our_partners h2, .why_wear_out_rail.repair_time h2, .why_wear_out_rail.repair_time p, .why_wear_out_rail.repair_time p+p").animated("fadeInUp");
-    $(".our_partners .our_partners_slider, .hydropower_you_can h2, .hydropower_you_can_item").animated("fadeInUp");
-    $(".map .map_contacts h2, .what_customers_think h2, .what_customers_think .what_customers_think_item").animated("fadeInUp");
-    $(".map .map_contacts_item, .repair_if_necessary h2, .repair_if_necessary .repair_if_necessary_item ").animated("fadeInUp");
-
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        $(".reliable_service h2").animated("fadeInUp");
+        $(".reliable_service p, .tips_and_articles h2, .tips_and_articles .tips_and_articles_item").animated("fadeInUp");
+        $(".intermediate .intermediate_title h2, .why_wear_out_rail h2, .why_wear_out_rail .why_wear_out_rail_item").animated("fadeInUp");
+        $(".intermediate .intermediate_title p").animated("fadeInUp");
+        $(".intermediate form div, .how_do_we_repair h2, .how_do_we_repair .how_do_we_repair_item").animated("fadeInUp");
+        $(".intermediate_wrap input[type=submit], .why_wear_out_rail.repair_time .why_wear_out_rail_item").animated("fadeInUp");
+        $(".reliable_service .reliable_service_item").animated("fadeInUp");
+        $(".our_partners h2, .why_wear_out_rail.repair_time h2, .why_wear_out_rail.repair_time p, .why_wear_out_rail.repair_time p+p").animated("fadeInUp");
+        $(".our_partners .our_partners_slider, .hydropower_you_can h2, .hydropower_you_can_item").animated("fadeInUp");
+        $(".map .map_contacts h2, .what_customers_think h2, .what_customers_think .what_customers_think_item").animated("fadeInUp");
+        $(".map .map_contacts_item, .repair_if_necessary h2, .repair_if_necessary .repair_if_necessary_item ").animated("fadeInUp");
+    }
 
     // Скролл меняем на всех страницах
 
@@ -193,7 +194,7 @@ $(document).ready(function() {
             link.hide();
         }
     });
-
+    
     // показывает при нажатии весь текст в параграфе
     $('.what_customers_think_item_action .open_a').click(function(e) {
         e.preventDefault();
