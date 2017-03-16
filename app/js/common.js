@@ -1,4 +1,4 @@
-$(function() {
+ $(function() {
 
     //SVG Fallback
     // if(!Modernizr.svg) {
