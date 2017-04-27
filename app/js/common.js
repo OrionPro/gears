@@ -165,6 +165,7 @@ $(document).ready(function() {
         $(".our_partners .our_partners_slider, .hydropower_you_can h2, .hydropower_you_can_item").animated("fadeInUp");
         $(".map .map_contacts h2, .what_customers_think h2, .what_customers_think .what_customers_think_item").animated("fadeInUp");
         $(".map .map_contacts_item, .repair_if_necessary h2, .repair_if_necessary .repair_if_necessary_item ").animated("fadeInUp");
+        $(".select_the_rack, .select_the_rack h2, .item_wrap, .item, .select_text").animated("fadeInUp");
     }
 
     // Скролл меняем на всех страницах
@@ -332,12 +333,10 @@ $(document).ready(function() {
 
 
     // Карта
-    //  гугл карта
-    // The latitude and longitude of your business / place
-    var position = [55.7026997, 37.7266861];
-    var posMark = new google.maps.LatLng(55.7026997, 37.7266861);
 
     function showGoogleMaps() {
+        var position = [55.7026997, 37.7266861];
+        var posMark = new google.maps.LatLng(55.7026997, 37.7266861);
 
         var latLng = new google.maps.LatLng(55.7026997, 37.7266861);
 
@@ -362,7 +361,9 @@ $(document).ready(function() {
         });
     }
 
-    showGoogleMaps();
+	if ($("section").hasClass("map")) {
+        showGoogleMaps();
+    }
 
     // Select в модальном окне
     $(document).click(function() {

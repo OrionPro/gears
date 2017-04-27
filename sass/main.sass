@@ -234,6 +234,118 @@ nav[canvas=header_top]
 		position: absolute
 		top: -100px
 		left: -10px
+//	Секция select_the_rack
+.select_the_rack
+	.container
+		padding-top: 100px
+		h2
+			margin-bottom: 65px
+		.item_wrap
+			margin-bottom: 30px
+			.item
+				width: 165px
+				height: 165px
+				display: inline-block
+				vertical-align: middle
+				margin-left: 13px
+				margin-right: 13px
+				&:nth-of-type(odd)
+					animation-delay: 0.3s
+				&:nth-of-type(even)
+					animation-delay: 0.6s
+				a
+					display: flex
+					align-items: center
+					justify-content: center
+					border: 1px solid transparent
+					text-decoration: none
+					width: 165px
+					height: 165px
+					transition: all 0.3s ease
+					&:hover
+						border: 1px solid #ee343b
+					img
+						display: block
+		.select_text
+			h3
+				font: 24px $font_Lato_Bold
+			p
+				font: 18px $font_Lato_Light
+				margin-bottom: 25px
+		.intermediate_wrap
+			float: none
+			margin-bottom: 90px
+			margin-top: 60px
+			.select_btn
+				display: inline-block
+				vertical-align: middle
+				a
+					text-align: center
+					display: block
+					text-decoration: none
+					@extend %main_btn
+					&:hover
+						@extend %main_btn_hover
+					&:active
+						@extend %main_btn_active
+					&:focus
+						@extend %main_btn_focus
+			.select
+				width: 263px
+				height: 54px
+				display: inline-block
+				position: relative
+				vertical-align: middle
+				margin-left: 10px
+				.slct_arrow
+					position: absolute
+					top: 11px
+					right: 40px
+					.fa
+						font-size: 28px
+						color: #2f3443
+						transform-origin: 50% 50% 0px
+						transition: 0.5s
+					&.active
+						.fa
+							color: $main_color
+							transform: rotate(180deg)
+
+				.drop
+					margin: 0
+					padding: 0
+					width: 263px
+					border: none
+					display: none
+					position: absolute
+					z-index: 2
+					text-align: left
+					li
+						list-style: none
+						cursor: pointer
+						font: 24px $font_Lato_Bold
+						color: #2f3443
+						display: block
+						padding: 8px 20px
+						transition: all 0.3s ease
+						&:hover
+							color: $main_color
+				.slct
+					display: block
+					border: none
+					padding: 12px 20px
+					font: 24px $font_Lato_Bold
+					color: #2f3443
+					text-align: left
+					overflow: hidden
+					text-decoration: none
+					position: relative
+					outline: 0
+					transition: all 0.3s ease
+					&:hover
+						color: $main_color
+
+
 //	Секция hydropower_you_can
 .hydropower_you_can
 	min-height: 480px
