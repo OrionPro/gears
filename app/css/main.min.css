@@ -1458,7 +1458,7 @@ nav[canvas=header_top].fixed .header_logo,nav[canvas=header_top].fixed .header_n
 .hydropower_you_can .hydropower_you_can_item:nth-of-type(3){-webkit-animation-delay:.9s;animation-delay:.9s}
 .hydropower_you_can .hydropower_you_can_item p{font-size:20px;margin-top:20px}
 .hydropower_you_can .hydropower_you_can_item a{margin-top:31px}
-.hydropower_you_can .hydropower_you_can_item .hydropower_you_can_item_img{height:90px;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;-ms-grid-row-align:flex-end;align-items:flex-end}
+.hydropower_you_can .hydropower_you_can_item .hydropower_you_can_item_img{height:90px;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
 .what_customers_think h2{margin-top:50px;line-height:1.3}
 .what_customers_think .what_customers_think_item_wrap{margin-top:65px}
 .what_customers_think .what_customers_think_item_wrap_inner{overflow:hidden;padding-top:5px}
@@ -1566,7 +1566,7 @@ nav[canvas=header_top].fixed.header_tips_and_articles{background-color:rgba(0,0,
 .footer .footer_copyright2{float:right}
 .footer .footer_copyright2 a{margin-right:37px;margin-top:17px;left:0}
 .footer .footer_copyright2 img{position:relative;left:5px}
-@media only screen and (max-width:1200px){.tips_and_articles .tips_and_articles_item,.why_wear_out_rail .why_wear_out_rail_item{text-align:center}
+@media only screen and (max-width:1200px){.select_the_rack .container .item_wrap,.tips_and_articles .tips_and_articles_item,.why_wear_out_rail .why_wear_out_rail_item{text-align:center}
 .header_modal{margin-top:20px}
 .intermediate .intermediate_wrap{margin-bottom:20px}
 .intermediate .intermediate_wrap .intermediate_item{display:block;margin:30px auto}
@@ -1707,7 +1707,8 @@ h2{font-size:24px}
 .what_customers_think .what_customers_think_item{width:400px;display:block;margin:0 auto 40px;overflow:hidden}
 .what_customers_think .what_customers_think_item_txt{width:230px}
 .what_customers_think .what_customers_think_item_txt p{max-height:64px}
-.map #map{position:static;width:100%;height:350px}
+.what_customers_think .what_customers_think_item_txt h3{font-size:13px}
+.map #map{position:inherit;width:100%;height:350px}
 .map .map_contacts{float:left;padding-left:30px}
 .buy h1,.buy p,.diagnostics h1,.diagnostics p,.select_the_rack .container .select_text,.why_wear_out_rail.repair_time p,.why_wear_out_rail.repair_time p+p{padding-left:15px;padding-right:15px}
 .footer .footer_copyright{display:block;float:none;margin-left:0}
@@ -1744,6 +1745,8 @@ h2{font-size:24px}
 .what_customers_think .what_customers_think_item .what_customers_think_item_txt{width:125px}
 .what_customers_think .what_customers_think_item .what_customers_think_item_txt div.social>a{font-size:10px}
 .header_title_img img{width:320px}
+.select_the_rack .container .item_wrap .item,.select_the_rack .container .item_wrap .item a{width:140px;height:140px}
+.select_the_rack .container .item_wrap .item img{width:85%}
 }
 @media only screen and (min-width:1200px){.container{width:1200px}
 }
