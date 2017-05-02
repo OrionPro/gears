@@ -101,7 +101,7 @@ label.intermediate_item_label{font-size:14px;color:#fff;display:inline-block;mar
 .header_item_circle p{margin-top:12px;text-align:center;font-size:24px;color:#fff}
 .header_item_circle span{font-size:50px;color:#fff}
 .header_item_circle .header_item_circle_img{position:absolute;top:0;left:-webkit-calc(50% - 70px);left:calc(50% - 70px);text-align:center}
-#nav-button-label{height:35px;width:43px;-webkit-transition:.4s;transition:.4s;margin-top:6px;cursor:pointer;position:relative;z-index:1002;pointer-events:all}
+#nav-button-label{height:35px;width:43px;-webkit-transition:.4s;transition:.4s;margin-top:6px;cursor:pointer;position:relative;left:18px;z-index:1002;pointer-events:all}
 #nav-button-label:hover .nav-line{background:#ec1d25}
 .nav-line,.nav-line.active{background:#ee343b}
 .nav-on .nav-line:first-child,.nav-on .nav-line:last-child{-webkit-transition:.5s;transition:.5s;width:0;opacity:0;left:50%;top:11px}
