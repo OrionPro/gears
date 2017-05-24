@@ -158,7 +158,7 @@ $(document).ready(function() {
         $(".reliable_service p, .tips_and_articles h2, .tips_and_articles .tips_and_articles_item").animated("fadeInUp");
         $(".intermediate .intermediate_title h2, .why_wear_out_rail h2, .why_wear_out_rail .why_wear_out_rail_item").animated("fadeInUp");
         $(".intermediate .intermediate_title p").animated("fadeInUp");
-        $(".intermediate form div, .how_do_we_repair h2, .how_do_we_repair .how_do_we_repair_item").animated("fadeInUp");
+        $(".intermediate_item, .how_do_we_repair h2, .how_do_we_repair .how_do_we_repair_item").animated("fadeInUp");
         $(".intermediate_wrap input[type=submit], .why_wear_out_rail.repair_time .why_wear_out_rail_item").animated("fadeInUp");
         $(".reliable_service .reliable_service_item").animated("fadeInUp");
         $(".our_partners h2, .why_wear_out_rail.repair_time h2, .why_wear_out_rail.repair_time p, .why_wear_out_rail.repair_time p+p").animated("fadeInUp");
